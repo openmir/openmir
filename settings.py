@@ -13,33 +13,18 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-if DEBUG == True:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'openmir',                   
-            'USER': 'root',                      
-            'PASSWORD': '0beth2',                
-            'HOST': '/var/run/mysqld/mysqld.sock', 
-            'PORT': '',
-            }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'openmir',                   
+        'USER': 'root',                      
+        'PASSWORD': '0beth2',                
+        'HOST': '/var/run/mysqld/mysqld.sock', 
+        'PORT': '',
         }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'openmir',                   
-            'USER': 'root',                      
-            'PASSWORD': '0beth2',                
-            'HOST': '/var/mysql/mysql.sock', 
-            'PORT': '3306',
-            }
-        }
+    }
 
-if DEBUG == True:    
-    OPENMIR_FILE_PATH = "/global/scratch/sness/openmir-dev"
-else:
-    OPENMIR_FILE_PATH = "/global/scratch/sness/openmir"
+OPENMIR_FILE_PATH = "."
 
 DEBUG = True
 
