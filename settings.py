@@ -23,7 +23,7 @@ DATABASES = {
         }
     }
 
-OPENMIR_FILE_PATH = "."
+OPENMIR_FILE_PATH = "www/"
 
 DEBUG = True
 
