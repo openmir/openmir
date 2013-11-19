@@ -49,4 +49,6 @@ steps to setup on ubuntu
 
    manage.py runserver 0.0.0.0:8000
 
-7) 
+7) Navigate to the home page
+
+   http://localhost:8080

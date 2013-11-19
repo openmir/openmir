@@ -3,12 +3,320 @@
 		"pk": 1,
 		"model": "recordings.recording", 
 		"fields": {
-			"name" : "experiments/hand-trimmed-10sec",
-			"audioFilename" : "experiments/hand-trimmed-10sec.wav",
-			"resultsFilepath" : "/global/scratch/sness/openmir-dev/results/experiments/hand-trimmed-10sec",
+			"name" : "orca",
+			"audioFilename" : "orca.wav",
+			"resultsFilepath" : "orca",
             "lengthSec" : 30.0,
             "channels" : 2,
             "sampleRate" : 44100
 		}
 	},
+    {
+        "pk": 1,
+        "model": "clips.catalog",
+        "fields": {
+            "name": "Orca, Background, Voice"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "clips.catalog",
+        "fields": {
+            "name": "Call Catalog"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "clips.catalog",
+        "fields": {
+            "name": "Call + Pod Catalog"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "orca",
+            "catalog": 1,
+            "recording": 1,
+            "startSec": "0.000",
+            "endSec": "2.999"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "background",
+            "catalog": 1,
+            "recording": 1,
+            "startSec": "10.000",
+            "endSec": "12.999"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "voice",
+            "catalog": 1,
+            "recording": 1,
+            "startSec": "20.000",
+            "endSec": "22.999"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 1,
+            "startSec": "0.000",
+            "endSec": "2.999"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 1,
+            "startSec": "10.000",
+            "endSec": "12.999"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 1,
+            "startSec": "20.000",
+            "endSec": "22.999"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 1,
+            "startSec": "3.000",
+            "endSec": "5.999"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 1,
+            "startSec": "13.000",
+            "endSec": "15.999"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 1,
+            "startSec": "23.000",
+            "endSec": "25.999"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 1,
+            "startSec": "6.000",
+            "endSec": "9.999"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 1,
+            "startSec": "16.000",
+            "endSec": "19.999"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 1,
+            "startSec": "26.000",
+            "endSec": "29.999"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 2,
+            "startSec": "0.000",
+            "endSec": "205.999"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 2,
+            "startSec": "210.000",
+            "endSec": "505.999"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 2,
+            "startSec": "510.000",
+            "endSec": "695.999"
+        }
+    },
+	{
+		"pk": 1,
+		"model": "games.game", 
+		"fields": {
+			"name" : "game1 - obv"
+		}
+	},
+	{
+		"pk": 1,
+		"model": "games.level", 
+		"fields": {
+			"game" : 1,
+            "queryClip" : 1,
+            "correctReferenceClip" : 1,
+            "otherReferenceClip1" : 2,
+            "otherReferenceClip2" : 3,
+            "otherReferenceClip3" : null
+		}
+	},
+	{
+		"pk": 2,
+		"model": "games.level", 
+		"fields": {
+			"game" : 1,
+            "queryClip" : 2,
+            "correctReferenceClip" : 2,
+            "otherReferenceClip1" : 1,
+            "otherReferenceClip2" : 3,
+            "otherReferenceClip3" : null
+		}
+	},
+	{
+		"pk": 3,
+		"model": "games.level", 
+		"fields": {
+			"game" : 1,
+            "queryClip" : 3,
+            "correctReferenceClip" : 3,
+            "otherReferenceClip1" : 1,
+            "otherReferenceClip2" : 2,
+            "otherReferenceClip3" : null
+		}
+	},
+	{
+		"pk": 1,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : [1,4,7]
+		}
+	},
+	{
+		"pk": 2,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : [2,5,8]
+		}
+	},
+	{
+		"pk": 3,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : [3,6,9]
+		}
+	},
+	{
+		"pk": 1,
+		"model": "trainingsets.trainingset", 
+		"fields": {
+			"name" : "trainingset1",
+            "catalog" : 1
+		}
+	},
+	{
+		"pk": 2,
+		"model": "trainingsets.trainingset", 
+		"fields": {
+			"name" : "trainingset2",
+            "catalog" : 1
+		}
+	},
+	{
+		"pk": 1,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 1,
+			"trainingset" : 1,
+			"clipList" : 1
+		}
+	},
+	{
+		"pk": 2,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 2,
+			"trainingset" : 1,
+			"clipList" : 2
+		}
+	},
+	{
+		"pk": 3,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 3,
+			"trainingset" : 1,
+			"clipList" : 3
+		}
+	},
+	{
+		"pk": 4,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 1,
+			"trainingset" : 2,
+			"clipList" : 4
+		}
+	},
+	{
+		"pk": 5,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 2,
+			"trainingset" : 2,
+			"clipList" : 5
+		}
+	},
+	{
+		"pk": 6,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 3,
+			"trainingset" : 2,
+			"clipList" : 6
+		}
+	}
 ]
