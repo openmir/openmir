@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>audiofile</th>
+  </tr>
+  {% for recording in recordings %}
+  <tr>
+    <td><a href="recordings/{{ recording.id }}">{{ recording.name }}</a></td>
+    <td>{{ recording.audiofile }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
+

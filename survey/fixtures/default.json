@@ -1,0 +1,744 @@
+[
+	{
+		"pk": 1,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, Matthew Wright, Luis Gustavo Martins, George Tzanetakis: Chants and Orcas: semi-automatic tools for audio annotation and analysis in niche domains.  ACM Multimedia 2008: 9-1",
+			"pdf": "ness2010.pdf",
+			"year": 2008
+		}
+	},
+	{
+		"pk": 2,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, Daniel Peter Biro and George Tzanetakis Computer-assisted cantillation and chant research using content-aware web visualization tools, Multimedia Tools and Applications, Accepted for publication",
+			"pdf": "ness2010.pdf",
+			"year": 2010
+		}
+	},
+	{
+		"pk": 3,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, George Tzanetakis, SOMba : Multiuser music creation using Self-Organizing Maps and motion tracking - ICMC 2009",
+			"pdf": "ness2010.pdf",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 4,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, Daniel Peter Biro and George Tzanetakis Computer-assisted cantillation and chant research using content-aware web visualization tools, Multimedia Tools and Applications, Accepted for publication",
+			"pdf": "",
+			"year": 2010
+		}
+	},
+	{
+		"pk": 5,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "S. R. Ness, A. Theocharis, G. Tzanetakis, L. G. Martins Improving Automatic Music Tag Annotation Using Stacked Generalization Of Probabilistic SVM Outputs, ACM Multimedia 2009",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 6,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, George Tzanetakis, Audioscapes: exploring surface interfaces for music exploration - ICMC 2009",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 7,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, George Tzanetakis, SOMba : Multiuser music creation using Self-Organizing Maps and motion tracking - ICMC 2009",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 8,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, Daniel Peter Biro and George Tzanetakis Computer-assisted cantillation and chant research using content-aware web visualization tools, Multimedia Tools and Applications, Accepted for publication",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 9,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "S. R. Ness, A. Theocharis, G. Tzanetakis, L. G. Martins Improving Automatic Music Tag Annotation Using Stacked Generalization Of Probabilistic SVM Outputs, ACM Multimedia 2009",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 10,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, George Tzanetakis, Audioscapes: exploring surface interfaces for music exploration - ICMC 2009",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 11,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, George Tzanetakis, SOMba : Multiuser music creation using Self-Organizing Maps and motion tracking - ICMC 2009",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 12,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, Daniel Peter Biro, George Tzanetakis : Content-aware web browsing and visualization tools for cantillation and chant research, 7th International Workshop on Content-Based Multimedia Indexing",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 13,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "George Tzanetakis, Manjinder Singh Benning, Steven R. Ness, Darren Minifie, Nigel Livingston : Assistive Music Browsing using Self-Organizing Maps - PETRA 2009 : 2nd International Conference on PErvasive Technologies Related to Assistive Environments",
+			"pdf": "",
+			"year": 2009
+		}
+	},
+	{
+		"pk": 14,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Steven R. Ness, Matthew Wright, Luis Gustavo Martins, George Tzanetakis: Chants and Orcas: semi-automatic tools for audio annotation and analysis in niche domains. ACM Multimedia 2008: 9-16",
+			"pdf": "",
+			"year": 2008
+		}
+	},
+	{
+		"pk": 15,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Daniel Peter Biro, Steven Ness, Matthew Wright, W. Andrew Schloss and George Tzanetakis Decoding the Song: Histogram-Based Paradigmatic and Syntagmatic Analysis of Melodic Formulae in Hungarian Laments, Jewish Torah Trope, Tenth Century Plainchant and Koran Recitation EMUS Expressivity in MUsic and Speech : IRCAM - Institut de Recherche et de Coordination Acoustique/Musique - Paris, France",
+			"pdf": "",
+			"year": 2008
+		}
+	},
+	{
+		"pk": 16,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A. 'Digitizing North Indian Music: Preservation and Extension Using Multimodal Sensor Systems, Machine Learning and Robotics' Doctor of Philosophy Dissertation, University of Victoria, Departments of Computer Science, Electrical Engineering, Mechanical Engineering, Music, and Psychology, Victoria, British Columbia, Canada, August 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 17,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Benning, M. S. 'Kalman Filtering for Computer Music Applications,' Masters Thesis, University of Victoria, Department of Electrical and Computer Engineering, Victoria, British Columbia, Canada, August 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 18,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Nevile, B. 'Gesture Analysis through a Computer's Audio Interface: The Audio-Input Drum,' Masters Thesis, University of Victoria, Department of Electrical and Computer Engineering, Victoria, British Columbia, Canada, December 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 19,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Benning, M., Kapur, A., and G. Tzanetakis. 'Multimodal Sensor Analysis of Sitar Performance: Where is the Beat?,' In Proceedings of the IEEE International Workshop on Multimedia Signal Processing, Crete, Greece, October 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 20,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Percival, G., Lagrange, M., and G. Tzanetakis 'Pedagogical Transcription for Multimodal Sitar Performance,'In Proceedings of the International Conference on Music Information Retrieval, Vienna, Austria, September 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 21,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tzanetakis, G., Jones, R., and K. McNally.'Stereo Panning Features for Classifying Recording Production Sytle,' In Proceedings of the International Conference on Music Information Retrieval, Vienna, Austria, September 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 22,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tzanetakis, G., Lagrange, M., Spong, P. and H. Symonds. 'OPENMIR: Digitizing and Analyzing Orca Vocalizations,' In Proceedings of the RIAO, Large-Scale Semantic Access to Content Conference, 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 23,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Lagrange, M., Percival, G., and G. Tzanetakis. 'Adaptive Harmonization and Pitch Correction of Polyphonic Audio Using Spectral Clustering,' In Proceedings of the International Conference on Digital Audio Effects, Bordeaux, France, September 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 24,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Percival, G., Wang, Y., and G. Tzanetakis. 'Effective Use of Multimedia for Computer-Assisted Musical Instrument Tutoring,' In Proceedings of the Educational Multimedia and Multimedia Education, Augsburg, Germany, September 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 25,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tindale, A., and M. Benning. 'Virtual Instrument Control for Music Therapy,' In Proceedings of Conference for Advancement of Assistive Technologies, San Sebastian, Spain, 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 26,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Trimpin, Singer, E., Suleman, A., and G. Tzanetakis. 'A Comparison of Solenoid-Based Strategies for Robotic Drumming,' In Proceedings of the International Computer Music Conference, Copenhagen, Denmark, August 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},	{
+		"pk": 27,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Robine, M., Percival, G., and M. Lagrange. 'Analysis of Saxophone Performance for Computer-Assisted Tutoring,' In Proceedings of the International Computer Music Conference, Copenhagen, Denmark, August 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 28,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Jones, R., Lagrange, M. and W. A. Schloss. 'A Hand Drumming Dataset for Physical Modeling,' In Proceedings of the International Computer Music Conference, Copenhagen, Denmark, August 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 29,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Benning, M., Kapur, A., Till, B., Tzanetakis, G., and P. Driessen. 'A Comparative Study on Wearable Sensors for Signal Processing of the North Indian Tabla,' In Proceedings of the IEEE Pacific Rim Conference on Communications, Computers and Signal Processing, Victoria, Canada, August 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 30,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Jones, R. 'A Poetics of Simulation for Audiovisual Performance,' In Proceedings of the International Conference on Computational Aesthetics, Banff, Canada, June, 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 31,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Jones, R. and W. A. Schloss. 'Controlling a Physical Model with a 2D Force Matrix,' In Proceedings of the International Conference for New Interfaces for Musical Expression, New York, USA, June, 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 32,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Till, B., Benning, M., and N. Livingston. 'The WISP: Wireless Inertial Sensing Package,' In Proceedings of the of the International Conference for New Interfaces for Musical Expression, New York, USA, June, 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 33,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Singer, E., Benning, M. S., Tzanetakis, G. and Trimpin. 'Integrating Hyperinstruments, Musical Robots, & Machine Musicianship for North Indian Classical Music,' In Proceedings of the International Conference for New Interfaces for Musical Expression, New York, USA, June, 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 34,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Lagrange, M., Texeira, L. F., Martins, L. G., and G. Tzanetakis. 'Speaker Segmentation of Interviews using Integrated Video and Audio Change Detectors,' In Proceedings of the International Workshop on Content-Based Multimedia Indexing, Bordeaux, France, June 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 35,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Lagrange, M., Martins, L. G., and G. Tzanetakis. 'Semi-Automatic Mono to Stereo Up-Mixing Using Sound Source Formation,' In Proceedings of the Audio Engineering Convention Conference, Vienna, Austria, May 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 36,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Lagrange, M., and G. Tzanetakis. 'Sound Source Tracking and Formation Using Normalized Cuts,' In Proceedings of the IEEE International Conference on Speech and Signal Processing, Honolulu, USA, April 2007.",
+			"pdf": "",
+			"year": 2007
+		}
+	},
+	{
+		"pk": 37,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Tzanetakis, G., Schloss, W. A., Driessen, P. and E. Singer. 'Towards the One-Man Indian Computer Music Performance System,' In Proceedings of the International Computer Music Conference (ICMC), New Orleans, USA, November, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 38,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Tindale, A, Benning, M. S. and P. Driessen. 'The KiOm: A Paradigm for Collaborative Controller Design.' In Proceedings of the International Computer Music Conference (ICMC), New Orleans, USA, November, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 39,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Nevile, B., Driessen, P., and W. A. Schloss. 'Radio Drum Gesture Detection System Using Only Sticks, Antenna, and Computer with Audio Interface.' In Proceedings of the International Computer Music Conference (ICMC), New Orleans, USA, November, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 40,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Burroughs, N., Parkin, A., and G. Tzanetakis. 'Flexible Scheduling for DataFlow Audio Processing.' In Proceedings of the International Computer Music Conference (ICMC), New Orleans, USA, November, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 41,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Lagrange, M., Murdoch, J. and G. Tzanetakis. 'Temporal Constraints for Sound Source Formation Using the Normalized Cut,' In Proceedings of the Neural Information Processing Systems Workshop on Advances in Models for Acoustic Processing, Whistler, Canada, December 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 42,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A. and E. Singer.' A Retrieval Approach for Human/Robot Musical Performace.' Proceedings of International Conference on Music Information Retrieval (ISMIR), Victoria, BA, Canada, October, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 43,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tzanetakis, G., Kapur, A., and A. Tindale. 'Learning Indirect Acquisition of Instrumental Gestures using Direct Sensors.' Proceedings of IEEE Workshop on Multimedia Signal Processing, Victoria, Canada, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 44,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Li, Y., Bellamy, S., Driessen, P., and G. Tzanetakis. 'Spatial Sound Rendering Using Measured Room Impulse Responses.' Proceedings of IEEE International Symposium on Signal Processing and Information Technology, Vancouver, Canada, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 45,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Murdoch, J., and G. Tzanetakis. 'Interactive Content-Aware Music Browsing Using the Radio Drum.' Proceedings of IEEE International Conference on Multimedia and Expo, Toronto, Canada, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 46,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Hechmer A, Tindale, A, and Tzanetakis, G.' LogoRhythms: Introductory Audio Programming for Computer Musicians in a Functional Language Paradigm.' Proceedings ASEE/IEEE Frontiers in Educations Conference, San Diego, CA, USA, October, 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 47,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "K. I. Nordstrom, and P. F. Driessen, 'Variable Preemphasis LPC for Modeling Vocal Effort in the Singing Voice', In Proceedings of the International Conference on Digital Audio Effects, Montreal, Canada, September 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 48,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "K. I. Nordstrom, P. F. Driessen, and G. A. Rutledge, 'Influence of the LPC filter upon the perception of breathiness and vocal effort', IEEE Int. Symposium on Signal Processing and Information Technology (ISSPIT06), Vancouver, BC, Canada, August 2006.",
+			"pdf": "",
+			"year": 2006
+		}
+	},
+	{
+		"pk": 49,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tzanetakis, G., Kapur, A., and R. I. McWalter. 'Subband-based Drum Transcription for Audio Signals,' In Proceedings of the IEEE International Workshop on Multimedia Signal Processing (MMSP) , Shanghai, China, November, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 50,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Jones, R. and B. Nevile. 'Creating Visual Music in Jitter: Approaches and Techniques,' Computer Music Journal, MIT Press, Vol. 29, No. 4, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 51,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Wang, G., Davidson, P., and P. R. Cook. 'Networked Performance: A Dream worth Dreamin?' Organized Sound, 10(3), pp. 209-219, October, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 52,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Davidson, P., Cook, P. R., Driessen, P. F., and W. A. Schloss. 'Preservation and Extension of Traditional Techniques: Digitizing North Indian Performance,' Journal of New Music Research, 34(3), pp. 227-236, September, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 53,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., 'Past to Present: Evolution and Preservation of Traditional Techniques using Computer Music Theory,' MusicAcoustica , Beijing, China, October, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 54,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Kapur, A., Virji-Babul, N., Tzanetakis, G. and P.F. Driessen. 'Gesture-Based Affective Computing on Motion Capture Data,' In Proceedings of the International Conference on Affective Computing and Intelligent Interaction (ACII) , Beijing, China, October, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 55,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Tzanetakis, G., Virji-Babul, N., Wang G. and P.R. Cook. 'A Framework for Sonification of Vicon Motion Capture Data,' In Proceedings of the International Conference on Digital Audio Effects (DAFX) , Madrid, Spain, September, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 56,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., McWalter, R.I., and G. Tzanetakis. 'New Music Interfaces for Rhythm-Based Retrieval,' In Proceedings of the International Conference on Music Information Retrieval (ISMIR) , London, England, September, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 57,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "A. Kapur. 'A History of Robotic Musical Instruments,' In Proceedings of the International Computer Music Conference (ICMC) , Barcelona, Spain, September, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 58,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Driessen, P., Schloss, W.A., Tzanetakis, G., McNally, K., and A. Kapur. 'Studio Report: University of Victoria Music Intelligence and Sound Technology Interdisciplinary Centre (MISTIC),' In Proceedings of the International Computer Music Conference (ICMC) , Barcelona, Spain, September, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 59,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Yang, E.L., Tindale, A.R., and P.F. Driessen. 'Wearable Sensors for Real-Time Musical Signal Processing,' In Proceedings of the IEEE Pacific Rim Conference (PACRIM), Victoria, Canada, August, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 60,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Nordstrom, K. I., Rutledge, G.A., and P.F. Driessen. 'Using Voice Conversion as a Paradigm for Analyzing Breathy Singing Voices,' In Proceedings of the IEEE Pacific Rim Conference (PACRIM), Victoria, Canada, August, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 61,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Jeon, C., and P.F. Driessen. 'Intelligent Artificial Vocal Vibrato Effecter Using Pitch Detection and Delay-Line,' In Proceedings of the Pro Audio Expo and Convention (AES), Barcelona, Spain, May 28-31, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 62,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Wang, G., Misra, A., Kapur, A., and P.R. Cook. 'Yeah, ChucK It! => Dynamic, Controllable Interface Mapping,' In Proceedings of the International Conference on New Interfaces for Musical Expression (NIME), Vancouver, Canada, May 23-25, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 63,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tindale, A., Kapur, A., Tzanetakis, G. Driessen, P.F., and W.A. Schloss. 'A Comparison of Sensor Strategies for Capturing Percussive Gestures,' In Proceedings of the International Conference on New Interfaces for Musical Expression (NIME), Vancouver, Canada, May 23-25, 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 64,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tindale, A.R., Kapur, A., Tzanetakis, G., and W.A. Schloss. 'Indirect Acquisition of Percussion Gestures Using Timbre Recognition,' In Proceedings of the Conference on Interdisciplinary Musicology (CIM), Montreal, Canada, March 2005.",
+			"pdf": "",
+			"year": 2005
+		}
+	},
+	{
+		"pk": 65,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Davidson, P., Cook, P.R., Driessen, P.F., and W.A. Schloss. 'Digitizing North Indian Performance,' In Proceedings of the International Computer Music Conference (ICMC), Miami, Florida, November 1-6, 2004. (Winner: Journal of New Music Research Distinguished Best Paper Award ICMC 2004)",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 66,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Davidson, P., Cook, P.R., Driessen, P.F., and W. A. Schloss. 'Evolution of Sensor-Based ETabla, EDholak, and ESitar,' Journal of ITC Sangeet Research Academy, vol 18, Kolkata, India, November, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 67,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tindale, A., Kapur, A., and I. Fujinaga. 'Towards Timbre Recognition of Percussive Sounds,' In Proceedings of the International Computer Music Conference (ICMC), Miami, Florida, November 1-6, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 68,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Radisavljevic, A. and P. F. Driessen. 'Path Difference Learning for Guitar Fingering Problem,' In Proceedings of the International Computer Music Conference (ICMC), Miami, Florida, November 1-6, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 69,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Benning, M.S., and G. Tzanetakis. 'Query-by-Beatboxing: Music Information Retrieval for the DJ,' In Proceedings of the International Conference on Music Information Retrieval (ISMIR), Barcelona, Spain, October 11-14, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 70,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tindale, A., Kapur, A. Tzanetakis, G., and I. Fujinaga. 'Retrieval of Percussion Gestures Using Timbre Classification Techniques,' In Proceedings of the International Conference on Music Information Retrieval (ISMIR), Barcelona, Spain, October 11-14, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 71,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Tzanetakis, G., and P. F. Driessen. 'Audio-Based Gesture Extraction on the ESitar Controller,' In Proceedings of the International Conference on Digital Audio Effects (DAFX), Naples, Italy, October 5-8, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 72,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Tzanetakis, G. 'Song-specific Bootstrapping of Singing Voice Structure,' In Proceedings of the IEEE International Conference on Multimedia and Expo (ICME), Taipei, Taiwan, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 73,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A., Lazier, A., Davidson, P., Wilson, R. S., and P. R. Cook. 'The Electronic Sitar Controller,' In Proceedings of the Internation Conference on New Interfaces for Musical Expression (NIME), Hamamatsu, Japan, June 3-5, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 74,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Kapur, A. 'Digitizing to Preserve Traditional North Indian Technique,' Society of Ethnomusicology Northwest Chapter Meeting, Victoria, BC, February 2004. (Winner: Thelma Adamson Best Student Paper Award SEM 2004)",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 75,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Davidson, P., Kapur, A., and P.R. Cook. 'A System for Generating Real-Time Visual Meaning for Live Indian Drumming,' Refractory: A Journal of Entertainment Media, Special Edition: The Sounds of Vision, Spectatorship and Aural Perception, 2004.",
+			"pdf": "",
+			"year": 2004
+		}
+	},
+	{
+		"pk": 76,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Schloss, A. 'Using Contemporary Technology in Live Performance: The Dilemma of the Performer,' Journal of New Music Research, The Netherlands, 32(3), September 2003.",
+			"pdf": "",
+			"year": 2003
+		}
+	},
+	{
+		"pk": 77,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Quackbush, S.R., and P. Driessen. 'Error Mitigation in MPEG-4 Audio Packet Communication Systems,' Audio Engineering Society 115th Convention, New York, October 2003.",
+			"pdf": "",
+			"year": 2003
+		}
+	},
+	{
+		"pk": 78,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Nevile, B., Driessen, P., and W. A. Schloss. 'A New Control Paradigm: Software-Based Gesture Analysis for Music,' Proceedings of IEEE Pacific Rim Conference, Victoria, Canada, August 2003.",
+			"pdf": "",
+			"year": 2003
+		}
+	},
+	{
+		"pk": 79,
+		"model": "papers.paper", 
+		"fields": {
+			"citation": "Schloss, W. A. and P. Driessen. 'Designing New Musical Instruments, the Artist Engineer Collaboration,' Innovation, Association of Professional Engineers and Geoscientists of British Columbia, pp 14-17, December 2002. (Winner: APEGBC Editorial Board Award, best paper for 2002)",
+			"pdf": "",
+			"year": 2002
+		}
+	},
+	{
+		"pk": 1, 
+		"model": "papers.paperauthor", 
+		"fields": {
+			"paper": 1,
+			"author": 1
+		}
+	},
+	{
+		"pk": 2, 
+		"model": "papers.paperauthor", 
+		"fields": {
+			"paper": 2,
+			"author": 1
+		}
+	},
+	{
+		"pk": 3, 
+		"model": "papers.paperauthor", 
+		"fields": {
+			"paper": 3,
+			"author": 1
+		}
+	},
+	{
+		"pk": 1, 
+		"model": "papers.papertheme", 
+		"fields": {
+			"paper": 1,
+			"theme": 1
+		}
+	}
+]

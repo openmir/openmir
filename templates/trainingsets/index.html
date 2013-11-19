@@ -1,0 +1,51 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>catalog</th>
+  </tr>
+  {% for trainingset in trainingsets %}
+  <tr>
+    <td><a href="trainingsets/{{ trainingset.id }}">{{ trainingset.id }}</a></td>
+    <td><a href="trainingsets/{{ trainingset.id }}">{{ trainingset.name }}</a></td>
+    <td>{{ trainingset.catalog.name }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<br>
+<br>
+<br>
+Create New TrainingSet
+<form name="input" action="/trainingsets/new" method="post">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" name="name" size="30"></td>
+    </tr>
+    <tr>
+      <td>Catalog</td>
+      <td>
+        <select name="catalog">
+          {% for catalog in catalogs %}
+          <option value="{{ catalog.id }}">{{ catalog.name }}</option>
+          {% endfor %}
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Use all catalog clips</td>
+      <td><input type="checkbox" name="all" checked></td>
+    </tr>
+  </table>
+  <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}
+

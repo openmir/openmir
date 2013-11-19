@@ -1,0 +1,68 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<h1>Classifier</h1>
+
+<table width="100%">
+  <tr>
+    <td>Name</td>
+    <td>{{classifier.name}}</td>
+  </tr>
+
+  <tr>
+    <td>Description</td>
+    <td>{{classifier.description}}</td>
+  </tr>
+
+  <tr>
+    <td>Options</td>
+    <td>{{classifier.options}}</td>
+  </tr>
+
+  <tr>
+    <td>Training Set</td>
+    <td>{{classifier.trainingset.name}}</td>
+  </tr>
+
+  <tr>
+    <td>Training Set</td>
+    <td>{{classifier.catalog.name}}</td>
+  </tr>
+
+  <tr>
+    <td>TrainStartTime</td>
+    <td>{{classifier.trainStartTime}}</td>
+  </tr>
+
+  <tr>
+    <td>TrainEndTime</td>
+    <td>{{classifier.trainEndTime}}</td>
+  </tr>
+
+  <tr>
+    <td>Trained</td>
+    <td>{{classifier.trained}}</td>
+  </tr>
+
+  <tr>
+    <td>mf</td>
+    <td><textarea rows="10" cols="100">{{classifier.mf}}</textarea></td>
+  </tr>
+
+  <tr>
+    <td>arff</td>
+    <td><textarea rows="10" cols="100">{{classifier.arff}}</textarea></td>
+  </tr>
+
+  <tr>
+    <td>mpl</td>
+    <td><textarea rows="10" cols="100">{{classifier.mpl}}</textarea></td>
+  </tr>
+
+
+
+</table>
+
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>classifier</th>
+    <th>training set</th>
+    <th>trainedStartTime</th>
+    <th>trainedEndTime</th>
+    <th>trained</th>
+    <th>celeryTaskId</th>
+  </tr>
+  {% for trainedClassifier in trainedClassifiers %}
+  <tr>
+    <td>{{ trainedClassifier.id }}</td>
+    <td>{{ trainedClassifier.classifier }}</td>
+    <td>{{ trainedClassifier.trainingSet }}</td>
+    <td>{{ trainedClassifier.trainStartTime }}</td>
+    <td>{{ trainedClassifier.trainEndTime }}</td>
+    <td>{{ trainedClassifier.trained }}</td>
+    <td><a href="tasks/{{ trainedClassifier.celeryTaskId }}/status">{{ trainedClassifier.celeryTaskId }}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
+    
+    

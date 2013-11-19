@@ -1,0 +1,59 @@
+{% extends "layouts/base.html" %}
+
+{% block header %}
+<script src="/www/js/lib/jquery.js"></script>
+<script src="/www/js/lib/jquery-ui-1.10.2.custom.js"></script>
+<script src="/www/js/lib/jquery.ba-throttle-debounce.js"></script>
+<script src="/www/js/lib/underscore.js"></script>
+<script src="/www/js/lib/backbone.js"></script>
+<script src="/www/js/lib/backbone-tastypie.js"></script>
+<script src="/www/js/lib/raphael.js"></script>
+
+<script src="/www/js/lib/d3.v3.js"></script>
+<script src="/www/js/lib/rickshaw.min.js"></script>
+
+<script src="/www/js/code/openmir/utils/ajaxCSRF.js"></script>
+<script src="/www/js/code/openmir/plugins/clipSpectrogramPlugin.js"></script>
+<script src="/www/js/code/openmir/apps/gameBuilderApp.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+
+<div class="container-fluid">
+  
+  <h3>{{ game.name }}</h3>
+  <div class="row-fluid">
+    <div class="span3">
+      
+      <h1>Query Clips</h1>
+      <div id="queryControls"></div>
+      <div id="queryClips"></div>
+    </div>
+
+    <div class="span3">
+      <h1>Reference Clips</h1>
+      <div id="catalogsContainer"></div>
+      <div id="catalogClips"></div>
+    </div>
+
+    <div class="span6">
+      <h1>Levels</h1>
+      <div id="levelBuilder"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  window.gameId = {{ game.id|safe }};
+  window.catalogId = {{ 1 }};
+</script>
+
+<script type="text/template" id="controlsTemplate">
+  Clips:<input type="text" name="clips" value="<%= clips %>">
+  Recording:<input type="text" name="recording" value="<%= recording %>">
+</script>
+
+{% endblock %}

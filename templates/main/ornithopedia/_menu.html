@@ -1,0 +1,30 @@
+<div data-role="page" id="menu"> 
+  
+  <div data-role="header" data-position="inline">
+	<h1>Orcagame Main Menu</h1>
+    {% if user.is_authenticated %}
+    <a href="/accounts/profile" rel="external" data-role="button" data-icon="gear" class="ui-btn-right">{{ user.username }}</a>
+    {% else %}
+    <a href="/accounts/login" rel="external" data-role="button" class="ui-btn-right">Login</a>
+    {% endif %}
+  </div>
+
+  <div class="menu">
+    <h1>
+      Welcome to the orcagame!
+    </h1>
+    <p>
+      In this study, we have a few different games that you can play
+      in which you listen to orca calls.  In playing the games, you
+      will be using your human intelligence to solve problems that
+      are difficult for computers but easy for humans.  With the
+      classifications you make in these games, you will be helping
+      scientists to better understand orca communication.
+    </p>
+    <ul>
+      <li><a href="#orcamatchobv_about" data-rel="external" rel="external">Orca/Background/Voice matching game</a></li>
+      <li><a href="#orcamatch_about">Call matching game</a></li>
+      <li><a href="/survey" rel="external">User survey</a></li>
+    </ul>
+  </div>
+</div>

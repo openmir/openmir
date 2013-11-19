@@ -1,0 +1,64 @@
+{% extends "layouts/base.html" %}
+
+{% block header %}
+<link href="/www/css/code/gameDataViewer.css" rel="stylesheet" media="screen">
+
+<script src="/www/js/lib/jquery.js"></script>
+<script src="/www/js/lib/jquery.dataTables.js"></script>
+<script src="/www/js/lib/jquery.ba-throttle-debounce.js"></script>
+<script src="/www/js/lib/underscore.js"></script>
+<script src="/www/js/lib/backbone.js"></script>
+<script src="/www/js/lib/raphael.js"></script>
+<script src="/www/js/lib/d3.v3.js"></script>
+
+<script src="/www/js/code/openmir/apps/gameDataViewerApp.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+<div id="chart"></div>
+
+<table>
+<tr>
+  <th>level id</th>
+  <th>query</th>
+  <th>reference</th>
+  <th>other1</th>
+  <th>other2</th>
+  <th>other3</th>
+  <th>#</th>
+  <th>all data</th>
+  <th>expert</th>
+  <th>orcalab</th>
+  <th>student</th>
+  <th>facebook</th>
+  <th>twitter</th>
+  <th>google+</th>
+  <th>google adwords</th>
+</tr>
+{% for item in data %}
+<tr>
+  <td>{{ item.id }}</td>
+  <td>{{ item.query }}</td>
+  <td>{{ item.reference }}</td>
+  <td>{{ item.other1 }}</td>
+  <td>{{ item.other2 }}</td>
+  <td>{{ item.other3 }}</td>
+  <td>{{ item.totalUserClassifications }}</td>
+  <td>{{ item.totalUserData.percentCorrect|floatformat:2 }}<br>{{ item.totalUserData.numCorrect }}/{{ item.totalUserData.numTotal}}</td>
+  <td>{{ item.exUserData.percentCorrect|floatformat:2 }}<br>{{ item.exUserData.numCorrect }}/{{ item.exUserData.numTotal}}</td>
+  <td>{{ item.olUserData.percentCorrect|floatformat:2 }}<br>{{ item.olUserData.numCorrect }}/{{ item.olUserData.numTotal}}</td>
+  <td>{{ item.stUserData.percentCorrect|floatformat:2 }}<br>{{ item.stUserData.numCorrect }}/{{ item.stUserData.numTotal}}</td>
+  <td>{{ item.fbUserData.percentCorrect|floatformat:2 }}<br>{{ item.fbUserData.numCorrect }}/{{ item.fbUserData.numTotal}}</td>
+  <td>{{ item.twUserData.percentCorrect|floatformat:2 }}<br>{{ item.twUserData.numCorrect }}/{{ item.twUserData.numTotal}}</td>
+  <td>{{ item.goUserData.percentCorrect|floatformat:2 }}<br>{{ item.goUserData.numCorrect }}/{{ item.goUserData.numTotal}}</td>
+  <td>{{ item.gaUserData.percentCorrect|floatformat:2 }}<br>{{ item.gaUserData.numCorrect }}/{{ item.gaUserData.numTotal}}</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+
+{% endblock %}

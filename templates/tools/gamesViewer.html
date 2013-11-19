@@ -1,0 +1,89 @@
+{% extends "layouts/base.html" %}
+
+{% block header %}
+<link href="/www/css/code/gamesViewer.css" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+<h1>Games</h1>
+
+<form action="/tools/buildTrainingSetFromGames">
+<table>
+  <tr>
+    <th>Game ID</th>
+    <th>Game Name</th>
+    <th>Select for training set</th>
+  </tr>
+  {% for game in games %}
+  <tr>
+    <td>{{ game.id }}</td>
+    <td>{{ game.name }}</td>
+    <td><input type="checkbox" name="gameId-{{game.id}}"></td>
+  </tr>
+  {% endfor %}
+  </tr>
+
+</table>
+
+<br>
+<select name="buildType">
+  <option value="majority">majority</option>
+  <option value="noisy">noisy</option>
+</select>
+<br>
+
+<input type="submit" value="Submit">
+</form>
+
+
+<h1>Games and Level</h1>
+  <table>
+    <tr>
+      <th>Game/Level</th>
+      <th>Query</th>
+      <th>Correct</th>
+      <th>Other1</th>
+      <th>Other2</th>
+      <th>Other3</th>
+    </tr>
+        
+    {% for item in data %}
+    <tr>
+      <td>
+        {{ item.name }}<br>
+        {{ item.gameName }}
+      </td>
+      <td>
+        {{ item.queryClip }}
+      </td>
+      <td>
+        {{ item.correctReferenceClip }}<br>
+        {{ item.numCorrectReferenceClip }}
+        <div class="bar" style="height:{{ item.numCorrectReferenceClip }}px"></div>
+      </td>
+      <td>
+        {{ item.otherReferenceClip1 }}<br>
+        {{ item.numOtherReferenceClip1 }}
+        <div class="bar" style="height:{{ item.numOtherReferenceClip1 }}px"></div>
+      </td>
+      <td>
+        {{ item.otherReferenceClip2 }}<br>
+        {{ item.numOtherReferenceClip2 }}
+        <div class="bar" style="height:{{ item.numOtherReferenceClip2 }}px"></div>
+      </td>
+      <td>
+        {{ item.otherReferenceClip3 }}<br>
+        {{ item.numOtherReferenceClip3 }}
+        <div class="bar" style="height:{{ item.numOtherReferenceClip3 }}px"></div>
+      </td>
+    </tr>
+    {% endfor %}
+    
+  </table>
+
+</div>
+
+{% endblock %}

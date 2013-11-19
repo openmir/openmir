@@ -1,0 +1,788 @@
+[
+	{
+		"pk": 1,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "experiments/hand-trimmed-10sec",
+			"audioFilename" : "experiments/hand-trimmed-10sec.wav",
+			"resultsFilepath" : "/global/scratch/sness/openmir-dev/results/experiments/hand-trimmed-10sec",
+            "lengthSec" : 30.0,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 2,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "experiments/hand-trimmed-4min",
+			"audioFilename" : "experiments/hand-trimmed-4min.wav",
+			"resultsFilepath" : "/global/scratch/sness/openmir-dev/results/experiments/hand-trimmed-4min",
+            "lengthSec" : 703.501,
+            "channels" : 1,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 3,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "experiments/call-catalog",
+			"audioFilename" : "experiments/call-catalog.wav",
+            "resultsFilepath" : "/global/scratch/sness/openmir-dev/results/experiments/call-catalog",
+            "lengthSec" : 937.639,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 4,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "2005/442A",
+			"audioFilename" : "2005/442A.wav",
+            "resultsFilepath" : "/global/scratch/sness/openmir-dev/results/2005/442A",
+            "lengthSec" : 2878.903,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 5,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "2005/449A",
+			"audioFilename" : "2005/449A.wav",
+            "resultsFilepath" : "/global/scratch/sness/openmir-dev/results/2005/449A",
+            "lengthSec" : 2878.903,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 6,
+		"model": "recordings.recording", 
+		"fields": {
+			"audioFilename" : "experiments/Shir-morocco-indiv.wav",
+			"name" : "experiments/Shir-morocco-indiv",
+            "resultsFilepath" : "/global/scratch/sness/openmir-dev/results/experiments/Shir-morocco-indiv",
+            "lengthSec" : 167.091,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 7,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "abmi/ABMI_2012_055_1",
+			"audioFilename" : "abmi/ABMI_2012_055_1.wav",
+            "resultsFilepath" : "/global/scratch/sness/openmir-dev/results/abmi/ABMI_2012_055_1",
+            "lengthSec" : 637.100,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 8,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "abmi/ABMI_2012_055_4",
+			"audioFilename" : "abmi/ABMI_2012_055_4.wav",
+            "resultsFilepath" : "/global/scratch/sness/openmir-dev/results/abmi/ABMI_2012_055_4",
+            "lengthSec" : 633.940,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 9,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "experiments/all-orca1",
+			"audioFilename" : "experiments/all-orca1.wav",
+			"resultsFilepath" : "/global/scratch/sness/openmir-dev/results/experiments/all-orca1",
+            "lengthSec" : 11000.000,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 10,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "experiments/all-orca2",
+			"audioFilename" : "experiments/all-orca2.wav",
+			"resultsFilepath" : "/global/scratch/sness/openmir-dev/results/experiments/all-orca2",
+            "lengthSec" : 10546.030,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+{
+    "pk": 11, 
+    "model": "recordings.recording", 
+    "fields": {
+        "channels": 2, 
+        "name": "experiments/all-b", 
+        "audioFilename": "experiments/all-b.wav", 
+        "lengthSec": 4251.981, 
+        "resultsFilepath": "/home/sness/Dropbox/openmir-dev/results/experiments/all-b", 
+        "sampleRate": 44100.0
+    }
+},
+	{
+		"pk": 12,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "1993/001A",
+			"audioFilename" : "1993/001A.wav",
+            "resultsFilepath" : "/global/scratch/sness/openmir-dev/results/1993/001A",
+            "lengthSec" : 2878.903,
+            "channels" : 2,
+            "sampleRate" : 44100
+		}
+	},
+    {
+        "pk": 1,
+        "model": "clips.catalog",
+        "fields": {
+            "name": "Orca, Background, Voice"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "clips.catalog",
+        "fields": {
+            "name": "Call Catalog"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "clips.catalog",
+        "fields": {
+            "name": "Call + Pod Catalog"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "orca",
+            "catalog": 1,
+            "recording": 1,
+            "startSec": "0.000",
+            "endSec": "2.999"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "background",
+            "catalog": 1,
+            "recording": 1,
+            "startSec": "10.000",
+            "endSec": "12.999"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "voice",
+            "catalog": 1,
+            "recording": 1,
+            "startSec": "20.000",
+            "endSec": "22.999"
+        }
+    },
+    {
+        "pk": 101,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N01",
+            "catalog": 2,
+            "recording": 3,
+            "startSec": "0.000",
+            "endSec": "2.900"
+        }
+    },
+    {
+        "pk": 102,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N02",
+            "catalog": 2,
+            "recording": 3,
+            "startSec": "2.900",
+            "endSec": "5.617"
+        }
+    },
+    {
+        "pk": 103,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N03",
+            "catalog": 2,
+            "recording": 3,
+            "startSec": "5.617",
+            "endSec": "7.446"
+        }
+    },
+    {
+        "pk": 104,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N04",
+            "catalog": 2,
+            "recording": 3,
+            "endSec": "10.110",
+            "startSec": "7.446"
+        }
+    },
+    {
+        "pk": 105,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N05 A08",
+            "catalog": 2,
+            "recording": 3,
+            "endSec": "83.853",
+            "startSec": "80.797"
+        }
+    },
+    {
+        "pk": 201,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N01 A11",
+            "catalog": 3,
+            "recording": 3,
+            "endSec": "113.971",
+            "startSec": "110.601"
+        }
+    },
+    {
+        "pk": 202,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N01 A12",
+            "catalog": 3,
+            "recording": 3,
+            "endSec": "181.968",
+            "startSec": "178.677"
+        }
+    },
+    {
+        "pk": 203,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N01 A24",
+            "catalog": 3,
+            "recording": 3,
+            "endSec": "288.807",
+            "startSec": "286.090"
+        }
+    },
+    {
+        "pk": 204,
+        "model": "clips.catalogclip",
+        "fields": {
+            "name": "N01 A30",
+            "catalog": 3,
+            "recording": 3,
+            "endSec": "314.510",
+            "startSec": "311.297"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 1,
+            "startSec": "0.000",
+            "endSec": "2.999"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 1,
+            "startSec": "10.000",
+            "endSec": "12.999"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 1,
+            "startSec": "20.000",
+            "endSec": "22.999"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 1,
+            "startSec": "3.000",
+            "endSec": "5.999"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 1,
+            "startSec": "13.000",
+            "endSec": "15.999"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 1,
+            "startSec": "23.000",
+            "endSec": "25.999"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 1,
+            "startSec": "6.000",
+            "endSec": "9.999"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 1,
+            "startSec": "16.000",
+            "endSec": "19.999"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 1,
+            "startSec": "26.000",
+            "endSec": "29.999"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 1,
+            "recording": 2,
+            "startSec": "0.000",
+            "endSec": "205.999"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 2,
+            "recording": 2,
+            "startSec": "210.000",
+            "endSec": "505.999"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip": 3,
+            "recording": 2,
+            "startSec": "510.000",
+            "endSec": "695.999"
+        }
+    },
+    {
+        "pk": 101,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 101,
+            "recording": 3,
+            "startSec": "0.000",
+            "endSec": "2.900"
+        }
+    },
+    {
+        "pk": 102,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 102,
+            "recording": 3,
+            "startSec": "2.900",
+            "endSec": "5.617"
+        }
+    },
+    {
+        "pk": 103,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 103,
+            "recording": 3,
+            "startSec": "5.617",
+            "endSec": "7.446"
+        }
+    },
+    {
+        "pk": 104,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 104,
+            "recording": 3,
+            "endSec": "10.110",
+            "startSec": "7.446"
+        }
+    },
+    {
+        "pk": 105,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 105,
+            "recording": 3,
+            "endSec": "83.853",
+            "startSec": "80.797"
+        }
+    },
+    {
+        "pk": 201,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 201,
+            "recording": 3,
+            "endSec": "113.971",
+            "startSec": "110.601"
+        }
+    },
+    {
+        "pk": 202,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 202,
+            "recording": 3,
+            "endSec": "181.968",
+            "startSec": "178.677"
+        }
+    },
+    {
+        "pk": 203,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 203,
+            "recording": 3,
+            "endSec": "288.807",
+            "startSec": "286.090"
+        }
+    },
+    {
+        "pk": 204,
+        "model": "clips.clip",
+        "fields": {
+            "catalogClip" : 204,
+            "recording": 3,
+            "endSec": "314.510",
+            "startSec": "311.297"
+        }
+    },
+	{
+		"pk": 1,
+		"model": "games.game", 
+		"fields": {
+			"name" : "game1 - obv"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "games.game", 
+		"fields": {
+			"name" : "game2 - calls"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "games.game", 
+		"fields": {
+			"name" : "game3 - calls + matrilines"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "games.game", 
+		"fields": {
+			"name" : "game2"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "games.game", 
+		"fields": {
+			"name" : "game3"
+		}
+	},
+	{
+		"pk": 1,
+		"model": "games.level", 
+		"fields": {
+			"game" : 1,
+            "queryClip" : 1,
+            "correctReferenceClip" : 1,
+            "otherReferenceClip1" : 2,
+            "otherReferenceClip2" : 3,
+            "otherReferenceClip3" : null
+		}
+	},
+	{
+		"pk": 2,
+		"model": "games.level", 
+		"fields": {
+			"game" : 1,
+            "queryClip" : 2,
+            "correctReferenceClip" : 2,
+            "otherReferenceClip1" : 1,
+            "otherReferenceClip2" : 3,
+            "otherReferenceClip3" : null
+		}
+	},
+	{
+		"pk": 3,
+		"model": "games.level", 
+		"fields": {
+			"game" : 1,
+            "queryClip" : 3,
+            "correctReferenceClip" : 3,
+            "otherReferenceClip1" : 1,
+            "otherReferenceClip2" : 2,
+            "otherReferenceClip3" : null
+		}
+	},
+	{
+		"pk": 101,
+		"model": "games.level", 
+		"fields": {
+			"game" : 2,
+            "queryClip" : 101,
+            "correctReferenceClip" : 101,
+            "otherReferenceClip1" : 102,
+            "otherReferenceClip2" : 103,
+            "otherReferenceClip3" : 104
+		}
+	},
+	{
+		"pk": 102,
+		"model": "games.level", 
+		"fields": {
+			"game" : 2,
+            "queryClip" : 102,
+            "correctReferenceClip" : 102,
+            "otherReferenceClip1" : 101,
+            "otherReferenceClip2" : 103,
+            "otherReferenceClip3" : 104
+		}
+	},
+	{
+		"pk": 103,
+		"model": "games.level", 
+		"fields": {
+			"game" : 2,
+            "queryClip" : 103,
+            "correctReferenceClip" : 103,
+            "otherReferenceClip1" : 101,
+            "otherReferenceClip2" : 102,
+            "otherReferenceClip3" : 104
+		}
+	},
+	{
+		"pk": 104,
+		"model": "games.level", 
+		"fields": {
+			"game" : 2,
+            "queryClip" : 104,
+            "correctReferenceClip" : 104,
+            "otherReferenceClip1" : 101,
+            "otherReferenceClip2" : 102,
+            "otherReferenceClip3" : 103
+		}
+	},
+	{
+		"pk": 201,
+		"model": "games.level", 
+		"fields": {
+			"game" : 3,
+            "queryClip" : 201,
+            "correctReferenceClip" : 201,
+            "otherReferenceClip1" : 202,
+            "otherReferenceClip2" : 203,
+            "otherReferenceClip3" : 204
+		}
+	},
+	{
+		"pk": 202,
+		"model": "games.level", 
+		"fields": {
+			"game" : 3,
+            "queryClip" : 202,
+            "correctReferenceClip" : 202,
+            "otherReferenceClip1" : 201,
+            "otherReferenceClip2" : 203,
+            "otherReferenceClip3" : 204
+		}
+	},
+	{
+		"pk": 203,
+		"model": "games.level", 
+		"fields": {
+			"game" : 3,
+            "queryClip" : 203,
+            "correctReferenceClip" : 203,
+            "otherReferenceClip1" : 201,
+            "otherReferenceClip2" : 202,
+            "otherReferenceClip3" : 204
+		}
+	},
+	{
+		"pk": 204,
+		"model": "games.level", 
+		"fields": {
+			"game" : 3,
+            "queryClip" : 204,
+            "correctReferenceClip" : 204,
+            "otherReferenceClip1" : 201,
+            "otherReferenceClip2" : 202,
+            "otherReferenceClip3" : 203
+		}
+	},
+	{
+		"pk": 1,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : [1,4,7]
+		}
+	},
+	{
+		"pk": 2,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : [2,5,8]
+		}
+	},
+	{
+		"pk": 3,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : [3,6,9]
+		}
+	},
+	{
+		"pk": 4,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : []
+		}
+	},
+	{
+		"pk": 5,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : []
+		}
+	},
+	{
+		"pk": 6,
+		"model": "clips.cliplist", 
+		"fields": {
+            "clips" : []
+		}
+	},
+	{
+		"pk": 1,
+		"model": "trainingsets.trainingset", 
+		"fields": {
+			"name" : "trainingset1",
+            "catalog" : 1
+		}
+	},
+	{
+		"pk": 2,
+		"model": "trainingsets.trainingset", 
+		"fields": {
+			"name" : "trainingset2",
+            "catalog" : 1
+		}
+	},
+	{
+		"pk": 1,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 1,
+			"trainingset" : 1,
+			"clipList" : 1
+		}
+	},
+	{
+		"pk": 2,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 2,
+			"trainingset" : 1,
+			"clipList" : 2
+		}
+	},
+	{
+		"pk": 3,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 3,
+			"trainingset" : 1,
+			"clipList" : 3
+		}
+	},
+	{
+		"pk": 4,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 1,
+			"trainingset" : 2,
+			"clipList" : 4
+		}
+	},
+	{
+		"pk": 5,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 2,
+			"trainingset" : 2,
+			"clipList" : 5
+		}
+	},
+	{
+		"pk": 6,
+		"model": "trainingsets.trainingsetcliplist", 
+		"fields": {
+			"catalogClip" : 3,
+			"trainingset" : 2,
+			"clipList" : 6
+		}
+	}
+]

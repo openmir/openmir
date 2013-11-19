@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  {% include "layouts/_xhtml_header.html" %}
+
+  <body class="home"> 
+
+    {% include "layouts/_navbar.html" %}
+
+	<div id="body"> 
+	  
+      <div class="container">
+
+        <div class="hero-unit">
+
+          <h1>Project : {{ project.name }}</h1>
+          
+          <table class="data">
+            <tr>
+              <th>recording name</th>
+              <th># clips</th>
+            </tr>
+            {% for recording in recordings %}
+            <tr>
+              <td><a href="/recordings/show/{{ recording.id }}">{{ recording.name }}</a></td>
+               <td>{{ recording.clip_set.count }}</td>
+            </tr>
+            {% endfor %}
+          </table>           
+        </div>
+        
+      </div>
+
+	  {% include "layouts/_footer.html" %}
+	</div> 
+
+  </body> 
+</html>

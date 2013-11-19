@@ -1,0 +1,28 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/main/about">About</a></li>
+          <li><a href="/main/tour">Tour</a></li>
+          <li><a href="/main/people">People</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="/recordings">Recordings</a></li>
+          <li><a href="/trainingsets">Trainingsets</a></li>
+          <li><a href="/classifiers">Classifiers</a></li>
+          <li><a href="/predictions">Predictions</a></li>
+          <li><a href="/accounts/logout">Logout</a></li>
+          {% else %}
+          <li><a href="/accounts/login">Login</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

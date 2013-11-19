@@ -1,0 +1,11 @@
+[
+	{
+		"pk": 1,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "aberts_towhee_pipilo_aberti_na",
+			"project" : "birds",
+			"audiofile" : "/datasets/birds/aberts_towhee_pipilo_aberti_na.wav"
+		}
+	}
+]

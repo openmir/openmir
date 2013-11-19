@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>recording</th>
+    <th>start time (sec)</th>
+    <th>end time (sec)</th>
+  </tr>
+  {% for clip in clips %}
+  <tr>
+    <td><a href="clips/show/{{ clip.id }}">{{ clip.name }}</a></td>
+    <td>{{ clip.recording.id }}</td>
+    <td>{{ clip.startSec }}</td>
+    <td>{{ clip.endSec }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+{% endblock %}
+

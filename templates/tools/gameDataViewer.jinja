@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+<table>
+<tr>
+  <th>Level id</th>
+  <th># User classifications</th>
+  <th>% Correct</th>
+  <th>% Correct Expert</th>
+</tr>
+{% for level in levels %}
+<tr>
+  <td>{{ level.id }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+
+{% endblock %}

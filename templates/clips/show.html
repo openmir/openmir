@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  {% include "layouts/_xhtml_header.html" %}
+
+  <body class="home"> 
+
+    {% include "layouts/_navbar.html" %}
+
+	<div id="body"> 
+	  
+      <div class="container">
+
+        <div class="hero-unit">
+
+          <h1>Clip : {{ clip.name }}</h1>
+          
+          <table class="data">
+            <tr>
+              <th>start time (ms)</th>
+              <th>end time (ms)</th>
+              <th>spectrogram</th>
+            </tr>
+            <tr>
+               <td>{{ clip.start_ms }}</td>
+               <td>{{ clip.end_ms }}</td>
+               <td><img src="/visualizations/clipSpectrogram/{{ clip.id }}?width=100&height=100"></td>
+            </tr>
+          </table>
+        </div>
+        
+      </div>
+
+	  {% include "layouts/_footer.html" %}
+	</div> 
+
+  </body> 
+</html>

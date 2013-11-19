@@ -1,0 +1,393 @@
+body {
+    font-family: Helvetica; 
+    font-size: 14px;
+    -webkit-user-select: none;
+    background-color: #000;
+}
+
+.screenContainer {
+    width: 1024px;
+    height: 768px;
+    margin-left:auto;
+    margin-right:auto;
+    background-repeat: no-repeat;
+}
+
+/* Background images for each screen */
+
+#mainContainer {
+    position: absolute;
+    background-image:url('../../assets/images/backgrounds/orchive/mainScreen.jpg');
+}
+
+#doneContainer {
+    position: absolute;
+    background-image:url('../../assets/images/backgrounds/orchive/doneScreen.jpg');
+}
+
+#scoreBoardContainer {
+    background-image:url('../../assets/images/backgrounds/orchive/scoreBoardScreen.jpg');
+}
+
+#gameContainer {
+    background-image:url('../../assets/images/backgrounds/orchive/playScreen.jpg');
+}
+
+#levelCompleteContainer {
+    background-image:url('../../assets/images/backgrounds/orchive/levelCompleteBackground.jpg');
+}
+
+/* other containers */
+
+#levelQueryContainer {
+    padding-top: 80px;
+    margin-left: 375px;
+}
+
+#levelReferenceContainer {
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* mainContainer assets */
+
+#mainPlayButton {
+    width: 400px;
+    height: 135px;
+    margin-top: 370px;
+    margin-left: 250px;
+    background-image:url('../../assets/images/buttons/orchive/mainPlayButton.png');
+}
+
+#mainPlayButton.pressed {
+    background-image:url('../../assets/images/buttons/orchive/mainPlayButtonPressed.png');
+}
+
+#doneNextButton {
+    width: 200px;
+    height: 108px;
+    margin-top: 600px;
+    margin-left: 720px;
+    background-image:url('../../assets/images/buttons/orchive/nextButton.png');
+}
+
+#doneNextButton.pressed {
+    background-image:url('../../assets/images/buttons/orchive/nextButtonPressed.png');
+}
+
+
+
+/* The calls */
+
+.levelQuery {
+    height: 350px;
+}
+
+.levelQuery .call {
+    padding: 10px;
+    display: inline-block;
+}
+
+.levelQuery .call .image {
+    background: #000;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    width: 253px;
+    height: 253px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.levelQuery .call .image img {
+    margin-top: 2px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+
+
+.levelReference {
+    display: inline-block;
+    height: 203px;
+}
+
+.levelReference .call {
+    padding: 10px;
+    display: inline-block;
+    margin: 0px;
+    width: 203px;
+    height: 203px;
+}
+
+.levelReference .call .image {
+    background: #000;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    width: 203px;
+    height: 203px;
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.levelReference .call .image img {
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+
+.click {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+
+.selected {
+    background: yellow;
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+
+.levelQuery img {
+    height: 250px;
+    width: 250px;
+}
+
+.call {
+    position: relative;
+}
+
+
+.call h2 {
+    position: absolute;
+    left: 30px;
+    width: 90%;
+    font-weight: bold;
+    color: #ffff77;
+    -webkit-text-stroke: 1px black;
+}
+
+.levelQuery h2 {
+    font-size: 50px;
+    top: 100px;
+}
+
+.levelQuery .click h2 {
+    top: 90px;
+    left: 20px;
+}
+
+.levelReference h2 {
+    top: 10px;
+    left: 5px;
+    font-size: 30px;
+}
+
+.levelReference .click h2 {
+    top: 0px;
+    left: 4px;
+}
+
+/* The guess and next buttons */
+#guessButton {
+    margin-left: 405px;
+    margin-top: 50px;
+    width: 200px;
+    height: 108px;
+    background-image: url('../../assets/images/buttons/orchive/selectButton.png');
+}
+
+#guessButton.pressed {
+    background-image: url('../../assets/images/buttons/orchive/selectButtonPressed.png');
+}
+
+#nextButton {
+    position: absolute;
+    left: 435px;
+    top: 600px;
+    width: 200px;
+    height: 108px;
+    background-image: url('../../assets/images/buttons/orchive/nextButton.png');
+}
+
+#nextButton.pressed {
+    background-image: url('../../assets/images/buttons/orchive/nextButtonPressed.png');
+}
+
+
+#currentReferenceUndefined {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/orchive/currentReferenceUndefined.jpg');
+}
+
+#guessMatched {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/orchive/guessMatchedScreen.jpg');
+}
+
+#guessDidntMatch {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/orchive/guessDidntMatchScreen.jpg');
+}
+
+.tryAgainButton {
+    position: absolute;
+    left: 370px;
+    top: 600px;
+    width: 300px;
+    height: 105px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/buttons/orchive/tryAgainButton.png');
+}
+
+.tryAgainButton.pressed {
+    background-image: url('../../assets/images/buttons/orchive/tryAgainButtonPressed.png');
+}
+
+.guessDidntMatchNextButton {
+    position: absolute;
+    left: 400px;
+    top: 600px;
+    width: 300px;
+    height: 108px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/buttons/orchive/nextButton.png');
+}
+
+.guessDidntMatchNextButton.pressed {
+    background-image: url('../../assets/images/buttons/orchive/nextButtonPressed.png');
+}
+
+.guessMatchedNextButton {
+    position: absolute;
+    left: 415px;
+    top: 600px;
+    width: 300px;
+    height: 108px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/buttons/orchive/nextButton.png');
+}
+
+.guessMatchedNextButton.pressed {
+    background-image: url('../../assets/images/buttons/orchive/nextButtonPressed.png');
+}
+
+.showAnswerButton {
+    position: absolute;
+    left: 370px;
+    top: 600px;
+    width: 300px;
+    height: 105px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/buttons/orchive/showAnswerButton.png');
+}
+
+.showAnswerButton.pressed {
+    background-image: url('../../assets/images/buttons/orchive/showAnswerButtonPressed.png');
+}
+
+
+.gameInfo {
+    position:absolute;
+    top: 0px;
+    width: 1024px;
+    height: 768px;
+    margin-left:auto;
+    margin-right:auto;
+    background-repeat: no-repeat;
+}
+
+.button {
+    margin: auto;
+    width : 200px;
+    height : 50px;
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+    text-align: center;
+    background: white;
+    color: black;
+    font-weight: bold;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.15);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#aaa));
+}
+
+
+.helpScreenImage {
+    width: 1024px;
+    height: 768px;
+}
+
+#helpScreen0 {
+    background-image:url('../../assets/images/backgrounds/orchive/helpScreen0.jpg');
+}
+
+#helpScreen1 {
+    background-image:url('../../assets/images/backgrounds/orchive/helpScreen1.jpg');
+}
+
+#helpScreen2 {
+    background-image:url('../../assets/images/backgrounds/orchive/helpScreen2.jpg');
+}
+
+#helpScreen3 {
+    background-image:url('../../assets/images/backgrounds/orchive/helpScreen3.jpg');
+}
+
+#helpNextButton {
+    margin-top: -150px;
+    margin-left: 840px;
+    width: 83px;
+    height: 83px;
+    background-image:url('../../assets/images/buttons/orchive/forwardButton.png');
+    background-repeat: no-repeat;
+}
+
+#helpNextButton.pressed {
+    background-image:url('../../assets/images/buttons/orchive/forwardButtonPressed.png');
+}
+
+
+#mainContainer h1 {
+    font-size: 120px;
+    margin: auto;
+    margin-top: 120px;
+    font-weight: bold;
+    color: orange;
+    -webkit-text-stroke: 3px black;
+}
+
+#hrebInfo {
+    position: absolute;
+    width: 450px;
+    height: 200px;
+
+    top: 550px;
+    left: 270px;
+
+    overflow: auto;
+    background: rgba(255,255,255,0.8);
+    text-align: left;
+    border: 2px solid black;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#hrebInfo h2 {
+    font-size: 20px;
+}
+
+#hrebInfo h3 {
+    font-size: 20px;
+}
+
+#hrebInfo h3 {
+    font-size: 12px;
+}
+
+
+.helpScreen {
+    height: 1000px;
+}
+
+
+#playLevelTurn {
+    position: absolute;
+    left: 900px;
+    top: 20px;
+    font-size: 50px;
+    color: white;
+}

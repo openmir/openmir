@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>orcaTalk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/bootstrap-transition.js"></script>
+    <script src="js/vendor/bootstrap-alert.js"></script>
+    <script src="js/vendor/bootstrap-modal.js"></script>
+    <script src="js/vendor/bootstrap-dropdown.js"></script>
+    <script src="js/vendor/bootstrap-scrollspy.js"></script>
+    <script src="js/vendor/bootstrap-tab.js"></script>
+    <script src="js/vendor/bootstrap-tooltip.js"></script>
+    <script src="js/vendor/bootstrap-popover.js"></script>
+    <script src="js/vendor/bootstrap-button.js"></script>
+    <script src="js/vendor/bootstrap-collapse.js"></script>
+    <script src="js/vendor/bootstrap-carousel.js"></script>
+    <script src="js/vendor/bootstrap-typeahead.js"></script>
+
+    <link href="css/vendor/bootstrap.css" rel="stylesheet">
+    <link href="css/vendor/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/code/orcatalkMain.css" type="text/css" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- fav and touch icons -->
+    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Orca Talk</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- <p class="navbar-text pull-right"> -->
+            <!--   Logged in as <a href="http://twitter.github.com/bootstrap/examples/fluid.html#">username</a> -->
+            <!-- </p> -->
+
+          </div><!--/.nav-collapse -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Orca Talk</h1>
+        <div class="mainOrcaImageRight">
+          <img src="assets/images/orcaMain.jpg">
+        </div>
+        <p>
+          The Northern Resident Orcas are a small population of killer
+          whales living off the west coast of British Columbia.  They
+          communicate via sight and touch, but primarily through
+          sound.  They make three main kinds of vocalizations,
+          whistles, echolocation clicks and stereotyped pulsed calls.
+          The calls that they make have been classified into different
+          call types by scientists, and in this website, we have games
+          to help you to learn these calls.  We have a number of games
+          for you to play, the first is Orca Talk, which teaches you
+          the different calls.  After you learn some orca calls, we
+          invite you to play the three games shown below.
+        </p>
+        <p><a href="orcatalk" class="btn btn-primary btn-large">Play Orca Talk &raquo;</a>
+          
+        </p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+
+        <div class="span4">
+          <h2>Orca/Background</h2>
+          <p>
+            In <a href="http://openmir.cs.uvic.ca">The Openmir</a> we
+            have over 20,000 hours of orca vocalizations that we have
+            digitized.  Scientists have made over 10,000 annotations
+            in this archive, but the vast majority of it remains
+            unannotated.  In this game, you will be shown a brief clip
+            of audio and will be asked to tell us if it has an orca
+            call in it, or if it is background noise.
+          </p>
+          <p>
+            <a href="orcamatchobv" class="btn">Play Orca/Background &raquo;</a>
+          </p>
+        </div>
+
+        <div class="span4">
+          <h2>Orca Match</h2>
+
+          <p>
+            Once we have found clips of audio that contain orca
+            vocalizations, we next want to figure out which orca call
+            is in that clip.  We use
+            sophisticated <a href="http://en.wikipedia.org/wiki/Machine_learning">Machine
+            Learning</a> algorithms to do this, but to make these
+            work, we need to train them and verify their results.  In
+            this game, you will listen to clips of orca song and will
+            see if your classification matches those of our Machine
+            Learning robots.  The results of this game will be used to
+            help train and test our Machine Learning systems.
+          </p>
+          <p>
+            <a href="orcamatch" class="btn">Play Orca Match &raquo;</a>
+          </p>
+        </div>
+
+        <div class="span4">
+          <h2>User Survey</h2>
+          <p>
+            We want to make our games better and to do this, we need
+            your feedback.  After playing the games, we would love it
+            if you would answer a short user survey and tell us about
+            your experiences with our game.
+          </p>
+          <p>
+            <a href="survey" class="btn">User Survey &raquo;</a>
+          </p>
+        </div>
+        
+      </div>
+        <hr>
+
+      <footer>
+        <p>© Orcatastic 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+</body></html>

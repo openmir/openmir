@@ -1,0 +1,428 @@
+/**************************************/
+/*          openmir.com CSS           */
+/**************************************/
+
+
+body {
+    padding-top: 90px; /* 60px to make the container go all the way to the bottom of the topbar (for bootstrap) */
+}
+
+.navbar {
+  .navbar-inner {
+    background-color: #2c2c2c;
+    background-image: none;
+  }
+}
+
+.navbar-inner {
+    background: none;
+    background-image: url(/www/img/openmir_header.jpg);
+    background-repeat: repeat-x;
+}
+
+/* Tabular lists of information */
+
+.data {
+    margin-top: 10px;
+}
+
+table { 
+	border: 1px solid #EE7728;
+}
+
+td {
+	padding: 5px;
+	border: 1px solid #F7CB75;
+}
+
+td .center {
+    text-align: center;
+}
+
+th {
+	padding: 5px;
+	border-bottom: 1px solid #EE7728;
+	border-right: 1px solid #EE7728;
+    text-align: center;
+    font-weight: bold;
+}
+
+.list th {
+	padding: 10px;
+}
+
+.nav-collapse {
+    background-color: #f00;
+}
+
+
+#waveform {
+    width: 1000px; 
+    height: 230px; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#waveformViewer {
+    width: 1000px; 
+    height: 235px; 
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+#shuttle {
+    width: 1000px; 
+    height: 30px; 
+    margin: 10px;
+}
+
+.shuttleControls img {
+    margin: 10px;
+}
+
+
+#data {
+    margin-top: 20px;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+.dataTables_length {
+    display: none;
+}
+
+.trainingsetLine {
+    background-color: #ccccff;
+    border: solid black 1px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#yin_chart_container {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 0px;
+}
+
+#yin_chart {
+    position: relative;
+    left: 40px;
+}
+#yin_y_axis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+}
+
+#pitchControlsContainer {
+    text-align: left;
+}
+
+#energy_chart_container {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#energy_chart {
+    position: relative;
+    left: 40px;
+}
+
+#energy_y_axis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+}
+
+#clipCollectionViewContainer div {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#controls input {
+    width: 50px;
+}
+
+#spectrogramControlsContainer {
+    text-align: left;
+}
+
+#queryClips {
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+#catalogClips {
+    border: 1px solid black;
+    width: 100%;
+}
+
+#clipCatalog {
+    border: 1px solid black;
+}
+
+
+#levelBuilder {
+    border: 1px solid black;
+}
+
+.clip {
+    border: 1px solid black;
+    height: 120px;
+    margin: 5px;
+    padding: 2px;
+    display: inline-block;
+    font-size: 12px;
+    position: relative;
+    min-width: 20px;
+}
+
+.clip img {
+    width: 100px;
+    height: 100px;
+}
+
+.close {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    color: red;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    background: white;
+}
+
+.close p {
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: -4px;
+    right: 1px;
+}
+
+.id {
+    position: absolute;
+    top: 20px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+}
+
+.id p {
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: -4px;
+    right: 1px;
+}
+
+.levelClip {
+    border: 1px solid black;
+    height: 120px;
+    margin: 5px;
+    padding: 2px;
+    display: inline-block;
+    font-size: 12px;
+    width: 100px;
+}
+
+.levelClip img {
+    height: 100px;
+}
+
+.levelClipTitle {    
+}
+
+#levelBuilder {
+    width: 700px;
+}
+
+#levelBuilder button {
+    margin: 5px;
+    float: right;
+}
+
+
+/* Force scrollbars on OSX */
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+
+.trainingsetClipList {
+    border: 1px solid black;
+    margin: 2px;
+    min-height: 120px;
+}
+
+#trainingsetClipLists {
+    border: 1px solid black;
+    margin: 3px;
+}
+
+#trainingset {
+    margin: 3px;
+}
+
+#trainingset .mllabel {
+    margin: 3px;
+}
+
+#trainingSpinner {
+    display: none;
+}
+
+.selected {
+    background: yellow;
+}
+
+.spinner {
+    position: relative;
+    left: 50px;
+    top: 0px;
+    background-image: url(/www/img/spinner.gif);
+    width: 128px;
+    height: 15px;
+    display: none;
+}
+
+#catalogClipsContainer {
+    border: solid black 1px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#catalogClipDetailContainer {
+    border: solid black 1px;
+    padding: 5px;
+    margin: 5px;
+    height: 220px;
+    width: 210px;
+}
+
+.detailClip img {
+    width: 200px;
+    height: 200px;
+}
+
+#catalogsContainer .catalog {
+    width: 100%;
+    background: #99ff99;
+    border: solid black 1px;
+    margin: 2px;
+}
+
+.newCatalogClipName {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.newCatalogClipButton {
+    margin-left: 5px;
+}
+
+.trainingsetClipList {
+    min-height: 100px;
+}
+
+textarea { 
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.infoImage {
+    float: right;
+}
+
+.personImage {
+    float: right;
+}
+
+.personImage img {
+    width: 200px;
+}
+
+
+#spectrogram {
+    width: 1000px; 
+    height: 240px; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#spectrogram .yaxis {
+    float: left;
+    width: 50px;
+}
+
+
+#dataviewer {
+    width: 1000px; 
+    height: 230px; 
+}
+
+#dataviewer .yaxis {
+    float: left;
+    width: 50px;
+}
+
+#dataviewer .graph {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.section {
+    width: 80%;
+    background: #f7fbff;
+    margin: 10px;
+    padding: 10px;
+}
+
+.chooser {
+    width: 90%;
+    height: 220px;
+    margin: 2px;
+    padding: 10px;
+    background: #d2edf8;
+    overflow: auto;
+    overflow-x: hidden;
+
+}
+
+.chooserLine {
+    margin: 5px;
+    padding: 10px;
+    background: #8cd3f3;
+}

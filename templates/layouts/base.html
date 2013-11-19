@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="/www/css/lib/bootstrap-{{ site }}.css" rel="stylesheet" media="screen">
+    <link href="/www/css/code/base.css" rel="stylesheet" media="screen">
+
+      {% block header %}{% endblock %}
+
+  </head>
+
+  <body>
+
+    {% include "layouts/_navbar.html" %}
+
+    {% block content %}{% endblock %}
+
+
+  </body>
+</html>

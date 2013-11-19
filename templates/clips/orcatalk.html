@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta name="viewport" content="minimum-scale=1.0">
+	<meta name="viewport" content="maximum-scale=1.0">
+	<meta name="viewport" content="user-scalable=no">
+	<meta name="viewport" content="width=device-width">
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="css/vendor/reset-fonts-grids.css" type="text/css" />		
+	<link rel="stylesheet" href="css/code/orcatalk-ipad.css" type="text/css" />
+
+	<script type="text/javascript" src="js/vendor/phonegap-1.1.0.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-1.7.1.min.js"></script>
+
+    <script type="text/javascript" src="js/vendor/underscore-1.3.1.js"></script>
+    <script type="text/javascript" src="js/vendor/backbone-0.9.1.js"></script>
+    <script type="text/javascript" src="js/vendor/phonegap-1.1.0.js"></script>
+
+    <script type="text/javascript" src="js/code/orcatalk-util.js"></script>
+    <script type="text/javascript" src="js/code/call-catalog.js"></script>
+    <script type="text/javascript" src="js/code/turn-data.js"></script>
+    <script type="text/javascript" src="js/code/level-data.js"></script>
+    <script type="text/javascript" src="js/code/orcatalk.js"></script>
+
+  </head>
+  <body onload="onBodyLoad()">
+
+    <div id="container">
+      
+      <div id="mainContainer">
+        
+      </div>
+
+      <div id="scoreBoardContainer">
+        <div id="levelListContainer">
+        </div>
+      </div>
+
+      <div id="playContainer">
+      </div>
+
+      <div id="levelCompleteContainer">
+      </div>
+
+      <div id="helpContainer">
+      </div>
+
+      <!-- <div id="test"> -->
+      <!--   test -->
+      <!-- </div> -->
+      
+    </div>
+
+
+    <!-- Templates -->
+
+
+    <script type="text/template" id="reward0">
+      <div class="reward">
+        <div class="orcaImages">
+          <img src="assets/images/orca/A12.jpg">
+        </div>
+        <p>
+          The northern resident orca community is made up of three clans
+          A, G and R. There are 261 individuals in this community.  Orca
+          society is organized into matrilines, and the children of a
+          mother whale stay with her their whole lives, at least until a
+          daughter has enough children that she forms her own matriline.
+          One of these matriarchs is A12, she is also known as
+          "Scimitar" because of the distinctive shape of her dorsal fin,
+          and a picture of her is shown on the right.
+        </p>
+        <p>
+          The call that you just heard was from Scimitar's matriline!
+        </p>
+        
+      </div>
+    </script>
+
+    <script type="text/template" id="reward1">
+      <div class="reward">
+        <div class="orcaImages">
+          <img src="assets/orca/call-catalog/jpg/A36-N03-071506-D017-10139.jpg">
+        </div>
+        <p>
+          Great work!  Those were all calls from the A12 matriline.  The
+          A12 matriline is part of a larger pod of orcas named the A1
+          pod.  There are a total of 32 whales in this pod.  In the next
+          section of the game, we will listen to another call of the A1
+          pod, this call is N3, and a spectrogram of it is shown on the right.
+          Researchers have noticed that the N3 call tends to be more
+          commonly used when a pod is resting.  All the calls you hear
+          in the next section will also be from the A1 pod.  You will be
+          asked to guess 5 different N3 calls.
+        </p>
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward2">
+      <div class="reward">
+        <div class="orcaImages">
+          <img src="assets/images/orca/A34.jpg">
+        </div>
+
+        <p>
+          Good work!  Now you know two of the calls of the A1 pod, N4
+          and N3.  In 1975, A12, "Scimitar" gave birth to a daughter,
+          A34, also known as "Simoom".  A picture of her is shown on the
+          right.  In the next section, we will hear 6 different N1
+          calls, the first two are sung by the A12 matriline, and the
+          last 4 are sung by the A34 matriline.  See if you can hear the
+          similarities between them as you match them to other N1 calls
+          by the A1 pod.
+        <p>
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward3">
+      <div class="reward">
+        <div class="orcaImages">
+          <img src="assets/images/orca/orcalab_wide_md.jpg">
+        </div>
+        <p>
+          All of these calls were recorded at OrcaLab, a land-based
+          research station located on Hanson Island, a small island off
+          the north coast of Vancouver Island.  You can see a picture of
+          the main lab at Orcalab to the right.
+        </p>
+        <p>
+          In the next section, you will hear 5 examples of the N7 call
+          recorded at Orcalab.  N7 is one of the more frequently
+          vocalized calls, but is not quite as frequent as N4, which you
+          heard before.  See if you can pick out the N7 calls to the right.
+        </p>
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward4">
+      <div class="reward">
+
+        <div class="orcaImages">
+          <img src="assets/orca/call-catalog/jpg/A12-N07-091906-D096-11804.jpg">
+          <img src="assets/orca/call-catalog/jpg/A12-N09-080906-D041-10038.jpg">
+        </div>
+
+        <p>
+          In the very last question, there was a tricky call there, N09,
+          which sounds quite a bit like N07.  Some orca calls sound more
+          similar than others, and so far the calls we've listened to
+          have been quite distinct.  Here are spectrograms of an N07 and N09 call.
+        </p>
+        <p>
+          In the next section you will hear more N09 calls.  See if you
+          can hear a difference between them and the N07 call which it
+          is similar to.
+        </p>
+
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward5">
+      <div class="reward">
+        <div class="orcaImages">
+          <img src="assets/images/orca/A37.jpg">
+          <img src="assets/images/orca/A46.jpg">
+        </div>
+
+        <p>
+          Those were some difficult calls, especially at the end, so for
+          the next section, we'll give you an easier task, identifying
+          the N05 call.  For this next section, we'll be using calls
+          from all the matrilines in the A1 pod, which consist of the
+          A12, A30, A34 and A36 pods.  The A36 pod is a small pod
+          consisting of just two whales today, A37 "Plumper" and A46
+          "Kaikash".
+        </p>
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward6">
+      <div class="reward">
+        <div class="orcaImages">
+          <img src="assets/images/orca/paul_and_helena.jpg">
+        </div>
+        <p>
+          OrcaLab, where these calls were all recorded is run by
+          Dr. Paul Spong and Helena Symonds.  Their work focuses on the
+          long-term life history of the 'northern resident community' of
+          British Columbia orcas and on the protection of orca
+          habitat. They are also involved in the development of
+          technology that connects people to the natural world via the
+          Internet (www.orca-live.net). Orca acoustics are a core aspect
+          of OrcaLab's research. 
+        </p>
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward7">
+      <div class="reward">
+        <div class="orcaImages">
+          <img src="assets/images/orca/A5.jpg">
+        </div>
+
+        <p>
+          All the calls that we've heard so far have been from the A1
+          pod.  There are 10 pods in the A clan of Northern Residents,
+          and another pod that is commonly seen at OrcaLab is the A5
+          pod, which was named after a male, A5 "Top Notch", who was
+          named because a notch that he had at the top of his dorsal
+          fin.  Here is a picture of Top Notch:
+        </p>
+
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward8">
+      <div class="reward">
+        
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward9">
+      <div class="reward">
+        reward9
+      </div>
+    </script>
+    
+    <script type="text/template" id="reward10">
+      <div class="reward">
+        reward10
+      </div>
+    </script>
+
+
+    <!-- main templates -->
+
+    <script type="text/template" id="mainTemplate">
+      <h1>
+        Orca Talk
+      </h1>
+      <img id="mainPlayButton" class="clickButton" src="assets/images/buttons/mainPlayButton.png">
+      <div id="hrebInfo">
+
+        <h2>Letter of Information for Implied Consent</h2>
+
+        <h3>Citizen science with serious casual games : Three audio case studies</h3>
+
+        <div class="letterhead">
+          <p>Department of Computer Science </p>
+          <p>Engineering/ Computer Science Building (ECS) </p>
+          <p>        Room 504  </p>
+          <p>University of Victoria </p>
+          <p>Telephone: (250) 472-5700 </p>
+          <p>Fax: (250) 472-5708</p>
+        </div>
+
+        <p>You are invited to participate in a study entitled "Citizen
+          science with serious casual games : Three audio case studies"
+          that is being conducted by Steven Ness and George
+          Tzanetakis.</p>
+
+        <p>Steven Ness is a Ph.D. student in the department of Computer
+          Science at the University of Victoria and you may contact him
+          if you have further questions by emailing sness@uvic.ca</p>
+
+        <p>George Tzanetakis is a Faculty member in the department of
+          Computer Science at the University of Victoria and you may
+          contact him if you have further questions by emailing
+          gtzan@cs.uvic.ca.</p>
+
+        <p>As a graduate student, I am required to conduct research as
+          part of the requirements for a Ph.D. in Computer Science. It
+          is being conducted under the supervision of George
+          Tzanetakis. You may contact my supervisor at 250-472-5710.</p>
+
+        <h4>Purpose and Objectives</h4>
+
+
+        <p>The purpose of this research project is to design mobile and
+          web based interfaces and casual games to engage citizen
+          scientists to listen to, see, and interact with the
+          vocalizations of orcas (killer whales), birdsong and partially
+          annotated chants.  We will attempt to design these casual
+          mini-games so that they are engaging and fun for our
+          participants.  The data collected from these games will be
+          used to help train machine learning and machine hearing
+          systems to help us to classify these vocalizations. </p>
+
+        <h4>Importance of this Research</h4>
+
+        <p>Research of this type is important because we want to
+          investigate ways to make interfaces for citizen scientists
+          more engaging and interesting.  By doing this, we hope to
+          increase the amount of time and data that citizen scientists
+          provide to such projects.  Another main contribution is to use
+          these annotations to help researchers and scientists to study
+          difficult problems in bioacoustics, primarily scientists
+          studying orcas and birdsong.</p>
+
+        <h4>Participants Selection</h4>
+
+        <p>You are being asked to participate in this study because you
+          are interested in listening to the sounds of birds, whales
+          and/or partially annotated chants, and have some basic
+          knowledge of computers.</p>
+
+        <h4>What is involved</h4>
+
+        <p>If you agree to voluntarily participate in this research,
+          your participation will include answering a pre-test survey,
+          interacting with our web-based or tablet based game and
+          answering a post-test survey.</p>
+
+        <h4>Inconvenience</h4>
+
+        <p>Participation in this study may cause some inconvenience to
+          you, including taking approximately 30 minutes of your time to
+          complete the survey.</p>
+
+        <h4>Risks</h4>
+
+        <p>There are no known or anticipated risks to you by
+          participating in this research.</p>
+
+        <h4>Benefits</h4>
+
+        <p>The potential benefits of your participation in this research
+          is that you will potentially learn some of the vocalizations
+          of orcas, birds and partially annotated chants.  This will
+          hopefully be interesting and rewarding for them in itself.
+          They will also get to play a game that is designed to be
+          entertaining.  The data collected from the participants will
+          be used to help us to train machine learning and machine
+          hearing classifier systems with the eventual goal of
+          automatically segmenting and classifying these
+          vocalizations.</p>
+
+        <h4>Voluntary Participation</h4>
+
+        <p>Your participation in this research must be completely
+          voluntary. If you do decide to participate, you may withdraw
+          at any time without any consequences or any explanation. If
+          you do withdraw from the study your data will not be used.</p>
+
+        <h4>Researcher's Relationship with Participants</h4>
+
+        <p>
+          The researcher may have a relationship to potential
+          participants as a teacher or fellow student. To help prevent
+          this relationship from influencing your decision to
+          participate, the following steps to prevent coercion have been
+          taken:
+        </p>
+
+        <p>i) In order to minimize inducement, coercion or potential
+          harm, we will emphasize to the participants that we wish for
+          them to find this an enjoyable experience, and that their
+          responses will in no way be used against them outside this
+          study.</p>
+
+        <p>ii) At the start of the study, we will make sure to let the
+          students know that their responses will be held in confidence,
+          and that individual responses will be anonomized prior to
+          publication.  We will ensure that the students know that it is
+          important to us that they are protected from any judgment by
+          the researchers outside the parameters of this study.  </p>
+
+        <h4>Anonymity</h4>
+
+        <p>In terms of protecting your anonymity we will not ask for
+          your name, this survey is anonymous.</p>
+
+        <h4>Confidentiality</h4>
+
+        <p>Your confidentiality and the confidentiality of the data will
+          be protected by being anonymous.</p>
+
+        <h4>Dissemination of Results</h4>
+
+        <p>It is anticipated that the results of this study will be
+          shared with others in the following ways, in published
+          articles, in a thesis, on a website, and in presentations at
+          scholarly meetings.</p>
+
+        <h4>Disposal of Data</h4>
+
+        <p>Data from this study will be disposed of by securely deleting
+          it from the servers.
+        </p>
+
+
+        <h4>Contacts</h4>
+
+        <p>Individuals that may be contacted regarding this study
+          include Steven Ness (sness@uvic.ca) and George Tzanetakis
+          (gtzan@cs.uvic.ca)</p>
+        
+        <p>In addition, you may verify the ethical approval of this
+          study, or raise any concerns you might have, by contacting the
+          Human Research Ethics Office at the University of Victoria
+          (250-472-4545 or ethics@uvic.ca).</p>
+
+        <p>By completing and submitting the questionnaire, YOUR FREE AND
+          INFORMED CONSENT IS IMPLIED and indicates that you understand
+          the above conditions of participation in this study and that
+          you have had the opportunity to have your questions answered
+          by the researchers.</p>
+
+        <p>Please print and retain a copy of this letter for your
+          reference.</p>
+      </div>
+
+    </script>
+
+    <script type="text/template" id="scoreBoardTemplate">
+      <img id="scoreBoardBackButton" src="assets/images/buttons/backButton.png">
+    </script>
+
+    <script type="text/template" id="scoreBoardLockedLevelTemplate">
+      <div class="scoreBoardLevel scoreBoardLockedLevel">
+        <h1>&nbsp;</h1>
+        <div class="scoreBoardLevelStars">
+          <img src="assets/images/buttons/blank.gif" height="21px">
+        </div>
+      </div>
+    </script>
+
+    <script type="text/template" id="scoreBoardUnlockedLevelTemplate">
+      <div class="scoreBoardLevel scoreBoardUnlockedLevel">
+        <h1><%= id %></h1>
+        <div class="scoreBoardLevelStars">
+          <% if (played) { %>
+            <% _.each(_.range(stars), function(i) { %>
+              <img src="assets/images/buttons/star-gold21.png">
+            <% }); %>
+            <% _.each(_.range(3 - stars), function(i) { %>
+              <img src="assets/images/buttons/star-white21.png">
+            <% }); %>
+            <% } else { %>
+              <img src="assets/images/buttons/blank.gif" height="21px">
+            <% } %>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/template" id="playTemplate">
+    </script>
+
+    <script type="text/template" id="queryTemplate">
+      <div class="query call">
+        <div class="image">
+          <img class="query" id="<%= id %>" src="<%= image %>">
+          <h2><%= name %> <%= matriline %>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/template" id="referenceTemplate">
+      <div class="reference call">
+        <div class="image">
+          <img class="reference" id="<%= id %>" src="<%= image %>">
+          <h2><%= name %> <%= matriline %></h2>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/template" id="pauseButtonTemplate">
+      <!-- Pause button -->
+      <div id="pause">
+        <img id="pauseButton" src="assets/images/buttons/pauseButton.png">
+      </div>
+    </script>
+
+    <script type="text/template" id="pauseScreenTemplate">
+      <div id="pauseScreen">
+      </div>
+      <div id="pauseMenu">
+        <div id="pauseMenuLevelNumber" class="levelNumber" >
+          <%= levelNumber %>
+        </div>
+        <img id="pauseMenuScoreBoardButton" src="assets/images/buttons/scoreBoard.png">
+        <img id="pauseMenuReplayLevelButton" src="assets/images/buttons/replayLevel.png">
+        <img id="pauseMenuPlayButton" src="assets/images/buttons/playButton.png">
+        <img id="pauseMenuHelpButton" src="assets/images/buttons/helpButton.png">
+      </div>
+    </script>
+
+    <script type="text/template" id="guessButtonTemplate">
+      <!-- Guess button -->
+      <div id="guess" class="button guess">
+        Guess
+      </div>
+    </script>
+
+    <script type="text/template" id="nextButtonTemplate">
+      <!-- Next button -->
+      <div id="next" class="button next">
+        Next
+      </div>
+    </script>
+
+    <script type="text/template" id="currentReferenceUndefinedTemplate">
+      <div id="currentReferenceUndefined" class="playInfo">
+        <h1>
+          Please pick a reference call (on the bottom) first.
+        </h1>
+      </div>
+    </script>
+
+    <script type="text/template" id="guessMatched">
+      <div id="guessMatched" class="playInfo">
+        <h1>
+          Guess matched!
+        </h1>
+      </div>
+    </script>
+
+    <script type="text/template" id="guessDidntMatch1">
+      <div id="guessDidntMatch1" class="playInfo">
+        <h1>
+          Didn't Match, try again<br />
+          This is your second try (15 points)<br />
+          (Two tries left)
+        </h1>
+      </div>
+    </script>
+
+    <script type="text/template" id="guessDidntMatch2">
+      <div id="guessDidntMatch2" class="playInfo">
+        <h1>
+          Didn't Match, try again<br />
+          This is your third try (5 points)<br />
+          (One try left)
+        </h1>
+      </div>
+    </script>
+
+    <script type="text/template" id="guessDidntMatch3">
+      <div id="guessDidntMatch3" class="playInfo">
+        <h1>
+          Sorry, your guess didn't match.<br />  
+          The correct answer was ***
+        </h1>
+      </div>
+    </script>
+
+    <script type="text/template" id="levelCompleteTemplate">
+      <div id="levelComplete">
+        <div id="levelCompleteLevelNumber" class="levelNumber">
+          <%= levelNumber %>
+        </div>
+        <div id="levelHighScore">
+          <%= highScore %>
+        </div>
+        <div id="levelScore">
+          Score : <%= score %>
+        </div>
+        <div id="levelStars">
+          <% _.each(_.range(stars), function(i) { %>
+            <img src="assets/images/buttons/star-gold32.png">
+          <% }); %>
+          <% _.each(_.range(3 - stars), function(i) { %>
+            <img src="assets/images/buttons/star-white32.png">
+          <% }); %>
+        </div>
+        <img id="levelCompleteScoreBoardButton" src="assets/images/buttons/scoreBoard.png">
+        <img id="levelCompleteReplayLevelButton" src="assets/images/buttons/replayLevel.png">
+        <img id="levelCompleteNextLevelButton" src="assets/images/buttons/nextLevel.png">
+      </div>
+    </script>
+
+    <script type="text/template" id="helpTemplate">
+      <div class="helpScreen">
+        <div class="helpScreenImage">
+          <img  src="assets/images/buttons/helpScreen<%= screen %>.png">
+        </div>
+        <img id="helpNextButton" src="assets/images/buttons/checkButton.png">
+      </div>
+    </script>
+
+    
+  </body>
+</html>

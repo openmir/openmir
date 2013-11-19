@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  {% include "layouts/_xhtml_header.html" %}
+
+  <body class="home"> 
+
+  {% include "layouts/_navbar.html" %}
+
+	<div id="body"> 
+	  
+      <div class="container">
+
+         <div class="hero-unit">
+           <table>
+             <tr>
+               <th>name</th>
+               <th>project</th>
+               <th>audiofile</th>
+             </tr>
+             {% for recording in recordings %}
+             <tr>
+               <td><a href="recordings/show/{{ recording.id }}">{{ recording.name }}</a></td>
+               <td>{{ recording.project.name }}</td>
+               <td>{{ recording.audiofile }}</td>
+             </tr>
+             {% endfor %}
+           </table>           
+         </div>
+          
+        </div>
+
+	    {% include "layouts/_footer.html" %}
+	  </div> 
+
+  </body> 
+</html>

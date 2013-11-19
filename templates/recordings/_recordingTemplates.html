@@ -1,0 +1,131 @@
+<script type="text/template" id="shuttleTemplate">
+  <div class="shuttleControls">
+    <span id="playPause">
+      <img src="http://openmir.sness.net:8000/www/img/code/openmir/editor/playpause.png">
+    </span>
+    <span id="pageBackward">
+      <img src="http://openmir.sness.net:8000/www/img/code/openmir/editor/prev_annotation.png">
+    </span>
+    <span id="pageForward">
+      <img src="http://openmir.sness.net:8000/www/img/code/openmir/editor/next_annotation.png">
+    </span>
+  </div>
+</script>
+
+<script type="text/template" id="spectrogramControlsTemplate">
+  <div class="spectrogramControls">
+
+    <div class="spectrogramControl">
+      <div class="row-fluid">
+        <div class="span4">
+          winSize :
+        </div>
+        <div class="span8">
+          <input type="text" size="3" name="winSize" value="<%= winSize %>">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</script>
+
+
+<script type="text/template" id="predictionTemplate">
+  <div class="predictionLine">
+    <%= name %>
+  </div>
+</script>
+
+<script type="text/template" id="pitchControlsTemplate">
+  <div class="pitchControls">
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          highHzCutoff :
+        </div>
+        <div class="span9">
+          <input type="text" name="highHzCutoff" value="<%= highHzCutoff %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          lowHzCutoff :
+        </div>
+        <div class="span9">
+          <input type="text" name="lowHzCutoff" value="<%= lowHzCutoff %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          highHzWrap :
+        </div>
+        <div class="span9">
+          <input type="text" name="highHzWrap" value="<%= highHzWrap %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          lowHzWrap :
+        </div>
+        <div class="span9">
+          <input type="text" name="lowHzWrap" value="<%= lowHzWrap %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          tolerance :
+        </div>
+        <div class="span9">
+          <input type="text" name="tolerance" value="<%= tolerance %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          energyCutoff :
+        </div>
+        <div class="span9">
+          <input type="text" name="energyCutoff" value="<%= energyCutoff %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          medianFilter :
+        </div>
+        <div class="span9">
+          <input type="text" name="medianFilter" value="<%= medianFilter %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          histogramBins :
+        </div>
+        <div class="span9">
+          <input type="text" name="histogramBins" value="<%= histogramBins %>">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</script>

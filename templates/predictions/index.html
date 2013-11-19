@@ -1,0 +1,58 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>classifier</th>
+    <th>recording</th>
+    <th>predictStartTime</th>
+    <th>predictEndTime</th>
+    <th>predicted</th>
+    <th>celeryTaskId</th>
+  </tr>
+  {% for prediction in predictions %}
+  <tr>
+    <td>{{ prediction.id }}</td>
+    <td>{{ prediction.classifier.name }}</td>
+    <td>{{ prediction.recording.name }}</td>
+    <td>{{ prediction.predictStartTime }}</td>
+    <td>{{ prediction.predictEndTime }}</td>
+    <td>{{ prediction.predicted }}</td>
+    <td><a href="tasks/{{ prediction.celeryTaskId }}/status">{{ prediction.celeryTaskId }}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+<br>
+<br>
+<br>
+<h5>Create New Prediction</h5>
+
+<form name="input" action="/predictions/new" method="post">
+  {% csrf_token %}
+
+  Classifier :
+  <select name="classifier">
+    {% for classifier in classifiers %}
+    <option value="{{ classifier.id }}">{{ classifier.name }}</option>
+    {% endfor %}
+  </select>
+  <br/>
+
+  Recording :
+  <select name="recording">
+    {% for recording in recordings %}
+    <option value="{{ recording.id }}">{{ recording.name }}</option>
+    {% endfor %}
+  </select>
+  <br/>
+
+  <input type="submit" value="Submit">
+</form>
+
+
+
+{% endblock %}
+

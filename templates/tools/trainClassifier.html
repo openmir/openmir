@@ -1,0 +1,57 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<form name="myform" action="/tools/trainClassifier/" method="POST">
+{% csrf_token %}
+
+<div class="container-fluid">
+  <div class="span6">
+    <h1>Classifiers</h1>
+    <table>
+      <tr>
+        <th>Select</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Options</th>
+      </tr>
+      {% for classifier in classifiers %}
+      <tr>
+        <td><input type="radio" name="classifier" value="{{ classifier.id }}" 
+                   {% if classifier.id == 1 %}checked{% endif %}></td>
+        <td>{{ classifier.name }}</td>
+        <td>{{ classifier.description }}</td>
+        <td>{{ classifier.options }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <div class="span6">
+    <h1>TrainingSets</h1>
+    <table>
+      <tr>
+        <th>Select</th>
+        <th>Name</th>
+        <th># Cliplists</th>
+        <th>Total clips</th>
+      </tr>
+      {% for trainingSet in trainingSets %}
+      <tr>
+        <td><input type="radio" name="trainingSet" value="{{trainingSet.id}}"
+                   {% if trainingSet.id == 1 %}checked{% endif %}></td>
+        <td>{{ trainingSet.name }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br>
+<input type="submit" value="Train">
+</form>
+
+{% endblock %}
+    
+    

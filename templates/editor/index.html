@@ -1,0 +1,59 @@
+{% extends "layouts/base.html" %}
+
+{% block scripts %}
+<script src="http://openmir.sness.net:8888/www/js/code/openmir/plugins/spectrogram.js"></script>
+<script src="http://openmir.sness.net:8888/www/js/code/openmir/apps/editor.js"></script>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div id="shuttle">
+</div>
+
+<div class="row-fluid">
+  <div class="span10">
+    <div id="spectrogram">
+    </div>
+  </div>
+  <div class="span2">
+    <div id="predictions">
+    </div>
+  </div>
+</div>
+
+<div id="data">
+</table>
+  
+</div>
+
+{% endblock %}
+
+{% block templates %}
+
+<script type="text/javascript">
+  window.editorRecordingId = {{ recording.id }};
+</script>
+
+<script type="text/template" id="shuttleTemplate">
+  <div class="shuttleControls">
+    <span id="playPause">
+      <img src="http://openmir.sness.net:8888/www/img/code/openmir/editor/playpause.png">
+    </span>
+    <span id="pageBackward">
+      <img src="http://openmir.sness.net:8888/www/img/code/openmir/editor/prev_annotation.png">
+    </span>
+    <span id="pageForward">
+      <img src="http://openmir.sness.net:8888/www/img/code/openmir/editor/next_annotation.png">
+    </span>
+  </div>
+</script>
+
+<script type="text/template" id="predictionTemplate">
+  <div class="predictionLine">
+    <%= name %>
+  </div>
+</script>
+
+{% endblock %}

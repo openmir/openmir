@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Openmir</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="/www/css/lib/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/www/css/lib/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/www/css/code/openmir.css" rel="stylesheet" media="screen">
+
+    {% block requirejs %}{% endblock %}
+    
+  </head>
+
+  <body>
+
+    {% include "layouts/_navbar.html" %}
+
+    <div class="container">
+
+      {% block content %}{% endblock %}
+
+    </div>
+    
+  </body>
+</html>

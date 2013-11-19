@@ -1,0 +1,23 @@
+[
+	{
+		"pk": 1, 
+		"model": "themes.theme", 
+		"fields": {
+			"name": "Bioacoustics"
+		}
+	},
+	{
+		"pk": 2, 
+		"model": "themes.theme", 
+		"fields": {
+			"name": "Music Information Retrieval"
+		}
+	},
+	{
+		"pk": 3, 
+		"model": "themes.theme", 
+		"fields": {
+			"name": "Computational Ethnomusicology"
+		}
+	}
+]

@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+
+{% block header %}
+<script src="/www/js/lib/jquery.js"></script>
+<script src="/www/js/lib/jquery-ui-1.10.2.custom.js"></script>
+<script src="/www/js/lib/jquery.ba-throttle-debounce.js"></script>
+<script src="/www/js/lib/underscore.js"></script>
+<script src="/www/js/lib/backbone.js"></script>
+<script src="/www/js/lib/backbone-tastypie.js"></script>
+<script src="/www/js/lib/raphael.js"></script>
+
+<script src="/www/js/lib/d3.v3.js"></script>
+<script src="/www/js/lib/rickshaw.min.js"></script>
+
+<script src="/www/js/code/openmir/utils/ajaxCSRF.js"></script>
+<script src="/www/js/code/openmir/plugins/clipSpectrogramPlugin.js"></script>
+<script src="/www/js/code/openmir/apps/trainingSetBuilderApp.js"></script>
+{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+
+<div class="container-fluid">
+  
+  <h3>{{ game.name }}</h3>
+  <div class="row-fluid">
+    <div class="span4">
+      
+      <h1>Clips</h1>
+      <div id="controls"></div>
+      <div id="clips"></div>
+    </div>
+    
+    <div class="span8">
+      <h1>TrainingSet</h1>
+      <div id="trainingSet"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  window.clipsJson = {{ clipsJson|safe }};
+  window.trainingSetJson = {{ trainingSetJson|safe }};
+</script>
+
+<script type="text/template" id="controlsTemplate">
+  Clips:<input type="text" name="clips" value="<%= clips %>">
+  Recording:<input type="text" name="recording" value="<%= recording %>">
+  <br />
+  Select all : <button class="selectAll" name="selectAll">
+</script>
+
+<script type="text/template" id="clipListTemplate">
+  <div class="mllabel">
+    Label : <input type="text" name="<%= index %>" value="<%= label %>">
+  </div>
+</script>
+
+<script type="text/template" id="trainingSetView">
+  Save : <button class="save" name="save">
+</script>
+
+
+{% endblock %}

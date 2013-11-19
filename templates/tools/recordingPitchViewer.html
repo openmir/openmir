@@ -1,0 +1,200 @@
+{% extends "layouts/base.html" %}
+
+{% block header %}
+
+<link href="/www/css/lib/rickshaw.min.css" rel="stylesheet" media="screen">
+
+<script src="/www/js/lib/jquery.js"></script>
+<script src="/www/js/lib/jquery.dataTables.js"></script>
+<script src="/www/js/lib/jquery.ba-throttle-debounce.js"></script>
+<script src="/www/js/lib/underscore.js"></script>
+<script src="/www/js/lib/backbone.js"></script>
+<script src="/www/js/lib/raphael.js"></script>
+<script src="/www/js/lib/d3.v3.js"></script>
+<script src="/www/js/lib/rickshaw.min.js"></script>
+
+<script src="/www/js/code/openmir/plugins/recordingViewerSpectrogramPlugin.js"></script>
+<script src="/www/js/code/openmir/apps/recordingPitchViewerApp.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div id="shuttle">
+  </div>
+  
+  <div class="row-fluid">
+    <div id="spectrogramContainer">
+      <div class="span12">
+        <div id="spectrogram">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="row-fluid">
+      <div id="pitchContainer">
+        <div id="yin_chart_container">
+          <div class="row-fluid">
+            <div class="span8">
+              <div class="spinner"></div>
+              <div id="yin_chart"></div>
+              <div id="yin_y_axis"></div>
+            </div>
+            <div class="span4">
+              <div id="pitchControlsContainer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div id="energyContainer">
+        <div id="energy_chart_container">
+          <div class="row-fluid">
+            <div class="span8">
+              <div class="spinner"></div>
+              <div id="energy_y_axis"></div>
+              <div id="energy_chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+  window.recordingId = {{ recording.id }};
+  window.recordingLengthSec = {{ recording.lengthSec }};
+</script>
+
+<script type="text/template" id="shuttleTemplate">
+  <div class="shuttleControls">
+    <span id="playPause">
+      <img src="/www/img/code/openmir/editor/playpause.png">
+    </span>
+    <span id="pageBackward">
+      <img src="/www/img/code/openmir/editor/prev_annotation.png">
+    </span>
+    <span id="pageForward">
+      <img src="/www/img/code/openmir/editor/next_annotation.png">
+    </span>
+  </div>
+</script>
+
+<script type="text/template" id="spectrogramControlsTemplate">
+  <div class="spectrogramControls">
+    
+    <div class="spectrogramControl">
+      <div class="row-fluid">
+        <div class="span4">
+          winSize :
+        </div>
+        <div class="span8">
+          <input type="text" size="3" name="winSize" value="<%= winSize %>">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</script>
+
+<script type="text/template" id="pitchControlsTemplate">
+  <div class="pitchControls">
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          highHzCutoff :
+        </div>
+        <div class="span9">
+          <input type="text" name="highHzCutoff" value="<%= highHzCutoff %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          lowHzCutoff :
+        </div>
+        <div class="span9">
+          <input type="text" name="lowHzCutoff" value="<%= lowHzCutoff %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          highHzWrap :
+        </div>
+        <div class="span9">
+          <input type="text" name="highHzWrap" value="<%= highHzWrap %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          lowHzWrap :
+        </div>
+        <div class="span9">
+          <input type="text" name="lowHzWrap" value="<%= lowHzWrap %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          tolerance :
+        </div>
+        <div class="span9">
+          <input type="text" name="tolerance" value="<%= tolerance %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          energyCutoff :
+        </div>
+        <div class="span9">
+          <input type="text" name="energyCutoff" value="<%= energyCutoff %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          medianFilter :
+        </div>
+        <div class="span9">
+          <input type="text" name="medianFilter" value="<%= medianFilter %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="pitchControl">
+      <div class="row-fluid">
+        <div class="span3">
+          histogramBins :
+        </div>
+        <div class="span9">
+          <input type="text" name="histogramBins" value="<%= histogramBins %>">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</script>
+
+
+{% endblock %}
