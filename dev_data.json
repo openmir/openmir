@@ -155,36 +155,6 @@
             "endSec": "29.999"
         }
     },
-    {
-        "pk": 10,
-        "model": "clips.clip",
-        "fields": {
-            "catalogClip": 1,
-            "recording": 2,
-            "startSec": "0.000",
-            "endSec": "205.999"
-        }
-    },
-    {
-        "pk": 11,
-        "model": "clips.clip",
-        "fields": {
-            "catalogClip": 2,
-            "recording": 2,
-            "startSec": "210.000",
-            "endSec": "505.999"
-        }
-    },
-    {
-        "pk": 12,
-        "model": "clips.clip",
-        "fields": {
-            "catalogClip": 3,
-            "recording": 2,
-            "startSec": "510.000",
-            "endSec": "695.999"
-        }
-    },
 	{
 		"pk": 1,
 		"model": "games.game", 
@@ -290,33 +260,6 @@
 			"catalogClip" : 3,
 			"trainingset" : 1,
 			"clipList" : 3
-		}
-	},
-	{
-		"pk": 4,
-		"model": "trainingsets.trainingsetcliplist", 
-		"fields": {
-			"catalogClip" : 1,
-			"trainingset" : 2,
-			"clipList" : 4
-		}
-	},
-	{
-		"pk": 5,
-		"model": "trainingsets.trainingsetcliplist", 
-		"fields": {
-			"catalogClip" : 2,
-			"trainingset" : 2,
-			"clipList" : 5
-		}
-	},
-	{
-		"pk": 6,
-		"model": "trainingsets.trainingsetcliplist", 
-		"fields": {
-			"catalogClip" : 3,
-			"trainingset" : 2,
-			"clipList" : 6
 		}
 	}
 ]
