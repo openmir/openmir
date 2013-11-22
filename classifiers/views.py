@@ -19,7 +19,8 @@ from classifiers.serializers import ClassifierSerializer
 from rest_framework import viewsets
 from rest_framework.decorators import link
 
-#from celery import Celery
+from celery import task
+from celery import Celery
 from celerytasks.tasks import celeryRunPrediction
 from celerytasks.tasks import celeryTrainClassifier
 

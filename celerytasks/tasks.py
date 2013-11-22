@@ -18,7 +18,7 @@ def add(x, y):
     return x + y
 
 @task()
-def celeryTrainClassifier(classifierId, data):
+def celeryTrainClassifier(classifierId):
     print "celeryTrainClassifier"
 
     classifier = Classifier.objects.get(pk=int(classifierId))

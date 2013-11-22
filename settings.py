@@ -34,6 +34,9 @@ CACHES = {
         }
     }
 
+import djcelery
+djcelery.setup_loader()
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -131,6 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'djcelery',
     'menus',
     'accounts',
     'main',
@@ -143,7 +147,6 @@ INSTALLED_APPS = (
     'visualizations',
     'games',
     'survey',
-#    'djcelery',
     'rest_framework',
 )
 
@@ -171,10 +174,6 @@ BROKER_URL = 'redis://localhost:6379/0'
 
 # Use redis as backend
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-
-
-#import djcelery
-#djcelery.setup_loader()
 
 USE_TZ=True
 

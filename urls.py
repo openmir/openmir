@@ -115,7 +115,7 @@ urlpatterns = patterns(
     (r'^admin/', include(admin.site.urls)),
 
     # Celery
-#    ('^tasks/', include('djcelery.urls')),
+    ('^tasks/', include('djcelery.urls')),
 
     # Django rest framework
     url(r'^api/v1/', include(router.urls)),

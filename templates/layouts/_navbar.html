@@ -10,13 +10,11 @@
         <ul class="nav">
           <li><a href="/">Home</a></li>
           <li><a href="/main/about">About</a></li>
-          <li><a href="/main/tour">Tour</a></li>
-          <li><a href="/main/people">People</a></li>
-          {% if user.is_authenticated %}
           <li><a href="/recordings">Recordings</a></li>
           <li><a href="/trainingsets">Trainingsets</a></li>
           <li><a href="/classifiers">Classifiers</a></li>
           <li><a href="/predictions">Predictions</a></li>
+          {% if user.is_authenticated %}
           <li><a href="/accounts/logout">Logout</a></li>
           {% else %}
           <li><a href="/accounts/login">Login</a></li>
