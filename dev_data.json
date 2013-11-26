@@ -7,7 +7,19 @@
 			"audioFilename" : "orca.wav",
 			"resultsFilepath" : "orca",
             "lengthSec" : 30.0,
-            "channels" : 2,
+            "channels" : 1,
+            "sampleRate" : 44100
+		}
+	},
+	{
+		"pk": 2,
+		"model": "recordings.recording", 
+		"fields": {
+			"name" : "orcaLong",
+			"audioFilename" : "orcaLong.wav",
+			"resultsFilepath" : "orcaLong",
+            "lengthSec" : 703.501,
+            "channels" : 1,
             "sampleRate" : 44100
 		}
 	},

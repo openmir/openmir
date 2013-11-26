@@ -1,9 +1,0 @@
-www/clips/1/1_orca-0.0-2.999.wav	orca
-www/clips/1/4_orca-3.0-5.999.wav	orca
-www/clips/1/7_orca-6.0-9.999.wav	orca
-www/clips/1/2_background-10.0-12.999.wav	background
-www/clips/1/5_background-13.0-15.999.wav	background
-www/clips/1/8_background-16.0-19.999.wav	background
-www/clips/1/3_voice-20.0-22.999.wav	voice
-www/clips/1/6_voice-23.0-25.999.wav	voice
-www/clips/1/9_voice-26.0-29.999.wav	voice
