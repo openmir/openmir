@@ -20,7 +20,10 @@
 
 import os
 
-DEBUG = True
+if (('DJANGO_ENVIRONMENT' in os.environ) and (os.environ['DJANGO_ENVIRONMENT'] == 'prod')):
+    DEBUG = False
+else:
+    DEBUG = True
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
@@ -30,16 +33,28 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'openmir',                   
-        'USER': 'root',                      
-        'PASSWORD': '0beth2',                
-        'HOST': '/var/run/mysqld/mysqld.sock', 
-        'PORT': '',
+if DEBUG == True:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'openmir',                   
+            'USER': 'root',                      
+            'PASSWORD': '0beth2',                
+            'HOST': '/var/run/mysqld/mysqld.sock', 
+            'PORT': '',
+            }
         }
-    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'openmir',                   
+            'USER': 'root',                      
+            'PASSWORD': '0beth2',                
+            'HOST': '/var/mysql/mysql.sock', 
+            'PORT': '3306',
+            }
+        }
 
 OPENMIR_FILE_PATH = "www/data"
 

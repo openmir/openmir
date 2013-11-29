@@ -45,12 +45,7 @@ def index(request):
 
 def show(request, gameId):
     game = Game.objects.get(pk=int(gameId))
-    levels = game.levels.all()
-    levelsJson = convertGameToJson(game,levels)
-
-    return render_to_response('games/show.html', {
-            "game" : game,
-            "levelsJson" : levelsJson}, context_instance=RequestContext(request))
+    return render(request, 'tools/gameBuilder.html', {"game" : game})
 
 def next(request):
     numGames = Game.objects.count()
