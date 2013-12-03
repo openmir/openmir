@@ -387,25 +387,28 @@ $(document).ready(function () {
         },
 
         render: function() {
-            var html = levelReferenceClipTemplate(this.model.toJSON());
-            this.setElement(html);
+            console.log("LevelReferenceClipView=", this.model.toJSON());
+            if (this.model.get("recording")) {
+                var html = levelReferenceClipTemplate(this.model.toJSON());
+                this.setElement(html);
 
-            var that = this;
-            $(this.el).droppable({
-                drop: function(ev, ui){
-                    var dropClipType = $(ui.draggable).data("clipType");
-                    ui.draggable.draggable('option','revert',true);
-                    if (dropClipType == "catalogClip") {
-                        var dropModel = $(ui.draggable).data("backboneView").model;
-                        that.model.set({id: dropModel.get("id"), 
-                                        name : dropModel.get("name"), 
-                                        startSec : dropModel.get("startSec"), 
-                                        endSec : dropModel.get("endSec"),
-                                        recording : dropModel.get("recording")
-                                       });
+                var that = this;
+                $(this.el).droppable({
+                    drop: function(ev, ui){
+                        var dropClipType = $(ui.draggable).data("clipType");
+                        ui.draggable.draggable('option','revert',true);
+                        if (dropClipType == "catalogClip") {
+                            var dropModel = $(ui.draggable).data("backboneView").model;
+                            that.model.set({id: dropModel.get("id"), 
+                                            name : dropModel.get("name"), 
+                                            startSec : dropModel.get("startSec"), 
+                                            endSec : dropModel.get("endSec"),
+                                            recording : dropModel.get("recording")
+                                           });
+                        }
                     }
-                }
-            });
+                });
+            }
             return this;
         }
     });

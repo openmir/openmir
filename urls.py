@@ -95,8 +95,8 @@ urlpatterns = patterns(
     
     # Games
     (r'^games$', 'games.views.index'),
-    (r'^games/show/(?P<gameId>\d+)$', 'games.views.show'),
-    #(r'^games/(?P<gameId>\d+)$', 'games.views.play'),
+    (r'^games/(?P<gameId>\d+)$', 'games.views.show'),
+    (r'^play/(?P<gameId>\d+)$', 'games.views.play'),
 
     # User survey
     (r'^survey$', 'survey.views.index'),
