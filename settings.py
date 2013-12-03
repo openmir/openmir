@@ -56,8 +56,11 @@ else:
             }
         }
 
-OPENMIR_FILE_PATH = "www/data"
-
+if DEBUG == True:
+    OPENMIR_FILE_PATH = "www/data"
+else:
+    OPENMIR_FILE_PATH = "/Volumes/csOrchive/Orchive"
+    
 DEBUG = True
 
 CACHES = {
