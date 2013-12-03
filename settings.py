@@ -57,9 +57,9 @@ else:
         }
 
 if DEBUG == True:
-    OPENMIR_FILE_PATH = "www/data"
+    OPENMIR_AUDIO_FILE_PATH = "www/data/audio"
 else:
-    OPENMIR_FILE_PATH = "/Volumes/csOrchive/Orchive"
+    OPENMIR_AUDIO_FILE_PATH = "/Volumes/csOrchive/Orchive/"
     
 DEBUG = True
 

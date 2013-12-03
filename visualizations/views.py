@@ -47,8 +47,7 @@ from django.views.decorators.cache import cache_page
 @cache_page(60 * 15)
 def spectrogram(request, recordingId):
     recording = Recording.objects.get(pk=int(recordingId))
-    #    audioFile = "/global/scratch/sness/openmir/audio/%s.wav" % (str(recording.name))
-    audioFile = os.path.join(settings.OPENMIR_FILE_PATH, "audio", (str(recording.audioFilename)))
+    audioFile = os.path.join(settings.OPENMIR_AUDIO_FILE_PATH, (str(recording.audioFilename)))
     startSec = float(request.GET.get('startSec', '0'))
     endSec = float(request.GET.get('endSec', '1.000'))
     lowHz = int(request.GET.get('lowHz', '0'))

@@ -41,7 +41,7 @@ from django.utils.encoding import smart_str
 
 def play(request, recordingId):
     recording = Recording.objects.get(pk=int(recordingId))
-    audioFile = os.path.join(settings.OPENMIR_FILE_PATH, "audio", (str(recording.audioFilename)))
+    audioFile = os.path.join(settings.OPENMIR_AUDIO_FILE_PATH, (str(recording.audioFilename)))
     startSec = float(request.GET.get('startSec', '0'))
     endSec = float(request.GET.get('endSec', str(recording.lengthSec)))
     lowHz = float(request.GET.get('lowHz', '0'))
