@@ -121,49 +121,129 @@ $(document).ready(function () {
         recordBaseUserEvent('mouseup',e);
     });
 
-    LevelQueryClipModel = Backbone.Model.extend({
+    // Contains global information about the game
+    PlayModel = Backbone.Model.extend({
+        defaults : {
+            currentQuery : null,
+            currentReference : null,
+            currentLevel : null,
+        },
+        
+    });
+    
+    ClipModel = Backbone.Model.extend({
+        urlRoot: '/api/v1/clip/',
     });
 
-    LevelQueryClipView = Backbone.View.extend({
-        el: $('#levelQueryContainer'),
+    QueryClipModel = ClipModel.extend({
+    });
+
+    // A query call, located at the top of the screen
+    QueryClipView = Backbone.View.extend({
+        className: "query",
+        
+        events: {
+            "mousedown .call": "mousedown",
+            "mouseup .call": "mouseup",
+        },
+        
+        mousedown: function(e){
+            $(this.el).find('.image').addClass('click');
+            playClick();
+
+            var audioUrl = "/audio/" + this.model.get("recording") + "?startSec=" + this.model.get("startSec") + "&endSec=" + this.model.get("endSec");
+            playAudio(audioUrl);
+
+            recordUserEvent({
+                'level' : 'interfaceEvent',
+                'type' : 'query',
+                'name' : 'click',
+                'modelId' : this.model.id
+            });
+
+        },
+        
+        mouseup: function(e) {
+            $('.image').removeClass('click');
+        },
+        
+        initialize: function(){
+        },
         
         render: function(){
-            this.$el.empty();
-            var template = _.template($("#levelQueryClipTemplate").html());            
+            var template = _.template($("#queryClipTemplate").html());            
             var html = template(this.model.toJSON());
-            this.$el.append(html);
+            $(this.el).append(html);
 
             return this;
         }
     });
 
-    LevelReferenceClipModel = Backbone.Model.extend({
+
+    ReferenceClipModel = ClipModel.extend({
     });
 
-    LevelReferenceClipsCollection = Backbone.Model.extend({
+    ReferenceClipCollection = Backbone.Collection.extend({
+        model: ReferenceClipModel,
+
     });
 
-    LevelReferenceClipView = Backbone.View.extend({
-        render: function(){
-            var template = _.template($("#levelReferenceClipTemplate").html());            
+    ReferenceClipView = Backbone.View.extend({
+        tagName: "div",
+        className: "reference",
+
+        events: {
+            "mousedown": "mousedown",
+            "mouseup": "mouseup",
+        },
+
+        mousedown: function(e){
+            this.options.playModel.set({currentReference : this.model});
+            $('.call').removeClass('selected');
+
+            this.$el.find('.call').addClass('selected');
+            this.$el.find('.image').addClass('click');
+
+            playClick();
+            var audioUrl = "/audio/" + this.model.get("recording") + "?startSec=" + this.model.get("startSec") + "&endSec=" + this.model.get("endSec");
+            playAudio(audioUrl);
+
+            recordUserEvent({
+                'level' : 'interfaceEvent',
+                'type' : 'reference',
+                'name' : 'click',
+                'modelId' : this.model.id
+            });
+
+        },
+        
+        mouseup: function(e) {
+            $('.image').removeClass('click');
+        },
+
+        
+        render: function() {
+            var template = _.template($("#referenceClipTemplate").html());            
             var html = template(this.model.toJSON());
+            $(this.el).append(html);
             return this;
-        }
+        },
     });
 
-    LevelReferenceClipsCollectionView = Backbone.View.extend({
-        el: $('#levelReferenceContainer'),
+    ReferenceClipsView = Backbone.View.extend({
+        tagName: "div",
+        className: "referenceContainer",
         
         renderOne: function(clip) {
-            var levelReferenceClipView = new LevelReferenceClipView({model : clip});
-            this.$el.append(levelReferenceClipView.render().$el);
+            var referenceClipView = new ReferenceClipView({model : clip, playModel : this.options.playModel});
+            this.$el.append(referenceClipView.render().$el);
             return this;
         },
 
         render: function() {
             this.$el.empty();
 
-            // Shuffle levelReferences
+            // Shuffle references
             var collectionArray = [];
             this.collection.each(function(clip) {
                 collectionArray.push(clip);
@@ -182,96 +262,158 @@ $(document).ready(function () {
             return this;
         },
     });
+    
+    //
+    // The play start page of the application
+    //
+    PlayView = Backbone.View.extend({
+        events: {
+            "mouseup": "mouseup",
 
+            "mouseup #guessButton" : "guessButtonUp",
+            "mousedown #guessButton" : "guessButtonDown",
 
-    LevelModel = Backbone.Model.extend({
-        urlRoot: '/api/v1/levels',
-    });
+            "mousedown .tryAgainButton" : "tryAgainButtonDown",
+            "mouseup .tryAgainButton" : "tryAgainButtonUp",
 
-    LevelCollection = Backbone.Collection.extend({
-        model: LevelModel,
+            "mousedown .guessMatchedNextButton" : "guessMatchedNextButtonDown",
+            "mouseup .guessMatchedNextButton" : "guessMatchedNextButtonUp",
 
-        initialize: function() {
+            "mousedown .guessDidntMatchNextButton" : "guessDidntMatchNextButtonDown",
+            "mouseup .guessDidntMatchNextButton" : "guessDidntMatchNextButtonUp"
         },
 
-    });
-
-    // Contains global information about the game
-    GameModel = Backbone.Model.extend({
-        urlRoot: '/api/v1/games/',
-
-        defaults : {
-            currentQuery : null,
-            currentReference : null,
-            currentLevel : 0,
+        guessDidntMatchNextButtonDown: function() {
+            $(this.el).find(".guessDidntMatchNextButton").addClass('pressed');
         },
 
-        initialize: function() {
-            this.bind('sync', this.doSync);
+        guessDidntMatchNextButtonUp: function() {
+            $(this.el).find(".guessDidntMatchNextButton").removeClass('pressed');
+            $("#guessDidntMatch").hide();
+            this.doNextLevelOrNextGame();
         },
 
-        doSync: function(e) {
-            levelsJson = this.get("levels");
-            levels = []
-            _.each(levelsJson, (function(lj) {
-                var queryClip = new LevelQueryClipModel(lj.queryClip);
-                var correctReferenceClip = new LevelReferenceClipModel(lj.correctReferenceClip);
-                var otherReferenceClip1 = new LevelReferenceClipModel(lj.otherReferenceClip1);
-                var otherReferenceClip2 = new LevelReferenceClipModel(lj.otherReferenceClip2);
-                var otherReferenceClip3 = new LevelReferenceClipModel(lj.otherReferenceClip3);
-
-                var level = new LevelModel({
-                    id : lj.id,
-                    game : lj.game,
-                    queryClip: queryClip,
-                    correctReferenceClip: correctReferenceClip,
-                    otherReferenceClip1: otherReferenceClip1,
-                    otherReferenceClip2: otherReferenceClip2,
-                    otherReferenceClip3: otherReferenceClip3
-                });
-
-                // level.includeChild(queryClip);
-                // level.includeChild(correctReferenceClip);
-                // level.includeChild(otherReferenceClip1);
-                // level.includeChild(otherReferenceClip2);
-                // level.includeChild(otherReferenceClip3);
-
-                levels.push(level);
-            })); 
-                
-            this.levelCollection = new LevelCollection(levels);
-
-            // TODO(sness) - Debugging
-            window.levelCollection = this.levelCollection;
-
-            console.log("GameModel doSync");
+        guessMatchedNextButtonDown: function() {
+            $(this.el).find(".guessMatchedNextButton").addClass('pressed');
         },
 
-        
-    });
+        doNextLevelOrNextGame: function() {
 
-    GameView = Backbone.View.extend({
-        initialize: function() {
-            this.model.bind('sync', this.render, this);
+            if (this.model.get("currentReference") === null) {
+                this.doGuessCurrentReferenceUndefined();
+                return;
+            }
+
+            var currentLevel = parseInt(this.model.get("currentLevel"), 10);
+            // Next level or next game
+            currentLevel += 1;
+            if (currentLevel < window.levels.length) {
+                var url = "/play/" + currentLevel;
+                app.navigate(url, {trigger: true});
+            } else {
+                app.navigate('done', {trigger : true});
+            }
+            
+        },
+
+        // The user has not yet chosen a reference call
+        doGuessCurrentReferenceUndefined: function() {
+            $("#currentReferenceUndefined").show();
+        },
+
+        guessMatchedNextButtonUp: function() {
+            $(this.el).find(".guessMatchedNextButton").removeClass('pressed');
+            this.doNextLevelOrNextGame();
+
+        },
+
+        tryAgainButtonDown: function(e) {
+            $(this.el).find(".tryAgainButton").addClass('pressed');
+        },
+
+        tryAgainButtonUp: function(e) {
+            $("#currentReferenceUndefined").hide();
+            $(this.el).find(".tryAgainButton").removeClass('pressed');
+        },
+
+        guessButtonDown: function(e){
+            $(this.el).find("#guessButton").addClass('pressed');
+        },
+
+        guessButtonUp: function() {
+            $('#guessButton').removeClass('pressed');
+            if (!this.model.get("currentReference")) {
+                this.doGuessCurrentReferenceUndefined();
+                return;
+            }
+
+            if (this.model.get("currentReference").get("title") == "correct") {
+                var correct = 1;
+            } else {
+                var correct = 0;
+            }
+
+            // Send the classification to the server
+            sendData({
+                'query' : this.model.get("currentQuery").id,
+                'reference' : this.model.get("currentReference").id,
+                correct : correct
+            });
+
+            if (correct) {
+                this.doGuessMatched();
+            } else {
+                this.doGuessDidntMatch();
+            }
+        },
+
+        // The user has not yet chosen a reference call
+        doGuessCurrentReferenceUndefined: function() {
+            $("#currentReferenceUndefined").show();
+        },
+
+
+        doGuessMatched: function() {
+            $("#guessMatched").show();
+
+        },
+
+        doGuessDidntMatch: function() {
+            $("#guessDidntMatch").show();
+        },
+
+
+        initialize: function(){
         },
 
         render: function(){
             this.$el.empty();
-            console.log("GameView render");
 
-            var level = this.model.levelCollection.at(0)
-            var levelQueryClipModel = level.get("queryClip");
-            var levelQueryClipView = new LevelQueryClipView({model : levelQueryClipModel});            
-            levelQueryClipView.render();
+            this.model.set("currentReference", null);
 
-            var correctReferenceClipModel = level.get("correctReferenceClip");
-            var otherReferenceClip1Model = level.get("otherReferenceClip1");
-            var otherReferenceClip2Model = level.get("otherReferenceClip2");
-            var otherReferenceClip3Model = level.get("otherReferenceClip3");
-            var levelReferenceClipsCollection = new LevelReferenceClipsCollection(
-                [correctReferenceClipModel, otherReferenceClip1Model, otherReferenceClip2Model, otherReferenceClip3Model]);
-            var levelReferenceClipsCollectionView = new LevelReferenceClipsCollectionView({collection : levelReferenceClipsCollection});
-            levelReferenceClipsCollectionView.render();
+            var level = this.model.get("currentLevel");
+
+            // Query
+            var queryClipJson = window.levels[level].queryClip;
+            var queryClipModel = new QueryClipModel(queryClipJson);
+            var queryClipView = new QueryClipView({model : queryClipModel});
+            this.$el.append(queryClipView.render().$el);
+
+            this.model.set({currentQuery : queryClipModel});
+
+            // References
+            var referenceClipCollection = new ReferenceClipCollection(
+                [(new ReferenceClipModel(window.levels[level].correctReferenceClip)), 
+                 (new ReferenceClipModel(window.levels[level].otherReferenceClip1)), 
+                 (new ReferenceClipModel(window.levels[level].otherReferenceClip2)), 
+                 (new ReferenceClipModel(window.levels[level].otherReferenceClip3))]);
+            var referenceClipsView = new ReferenceClipsView({collection : referenceClipCollection, playModel : this.model});
+            this.$el.append(referenceClipsView.render().$el);
+
+            $(this.el).append(_.template($("#guessButtonTemplate").html())());
+            $(this.el).append(_.template($("#currentReferenceUndefinedTemplate").html())());
+            $(this.el).append(_.template($("#guessMatched").html())());
+            $(this.el).append(_.template($("#guessDidntMatch").html())());
             
             return this;
         },
@@ -362,7 +504,7 @@ $(document).ready(function () {
         },
 
         helpNext: function(e){
-            var url = "/0";
+            var url = "/play/0";
             app.navigate(url, {trigger: true});
         },
 
@@ -382,16 +524,62 @@ $(document).ready(function () {
     var AppRouter = Backbone.Router.extend({
 
         initialize: function() {
+            // Turn the levels into backbone models
+            levels = []
+            _.each(window.levelsJson, (function(lj) {
+                levels.push(lj);
+            })); 
 
-            this.gameModel = new GameModel({ id : window.gameId});
-            this.gameView = new GameView({model : this.gameModel});
-            this.gameModel.fetch();
+            window.levels = levels;
+            
+            window.mainView = new MainView({ el: $("#mainContainer") });
+            window.doneView = new DoneView({ el: $("#doneContainer") });
+            window.helpView = new HelpView({ el: $("#helpContainer") });
 
-            // TODO(sness) - Debugging
-            window.gameModel = this.gameModel;
-
+            // The main game board
+            window.playModel = new PlayModel();
+            window.playView = new PlayView({model : playModel, el: $("#playContainer") });
         },
         
+        routes: {
+            "": "mainView",
+            "help/:screen" : "helpView",
+            "play/:level" : "playView",
+            "done" : "doneView",
+        },
+
+        mainView: function() {
+            this.hideAll();
+            $("#mainContainer").show();
+            mainView.render();
+        },
+
+        playView: function(level) {
+            playView.model.set("currentLevel",level);
+
+            this.hideAll();
+            $("#playContainer").show();
+            playView.render();
+        },
+
+        doneView: function(level) {
+            this.hideAll();
+            $("#doneContainer").show();
+            doneView.render();
+        },
+
+        helpView: function(screen) {
+            this.hideAll();
+            $("#helpContainer").show();
+            helpView.render(screen);
+        },
+
+        hideAll: function() {
+            $("#mainContainer").hide();
+            $("#playContainer").hide();
+            $("#doneContainer").hide();
+            $("#helpContainer").hide();
+        }
 
 
     });

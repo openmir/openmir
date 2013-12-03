@@ -33,12 +33,7 @@
       <div id="mainContainer" class="screenContainer">
       </div>
 
-      <div id="gameContainer" class="screenContainer">
-        <div id="levelQueryContainer">
-        </div>
-        <div id="levelReferenceContainer">
-        </div>
-
+      <div id="playContainer" class="screenContainer">
       </div>
 
       <div id="helpContainer" class="screenContainer">
@@ -48,7 +43,7 @@
       </div>
 
       <script type="text/template" id="currentReferenceUndefinedTemplate">
-        <div id="currentReferenceUndefined" class="gameInfo">
+        <div id="currentReferenceUndefined" class="playInfo">
           <div class="tryAgainButton"></div>
         </div>
       </script>
@@ -242,22 +237,26 @@
       </div>
     </script>
 
-    <script type="text/template" id="gameTemplate">
+    <script type="text/template" id="playTemplate">
     </script>
 
-    <script type="text/template" id="levelQueryClipTemplate">
-      <div class="levelQuery call">
+    <script type="text/template" id="queryClipTemplate">
+      <div class="queryContainer">
+        <div class="query call">
           <div class="image">
-            <img src="/visualizations/spectrogram/<%= recording %>?startSec=<%= startSec %>&endSec=<%= endSec %>&height=253&width=253&highHz=8000">
+            <img class ="query" src="/visualizations/spectrogram/<%= recording %>?startSec=<%= startSec %>&endSec=<%= endSec %>&height=253&width=253&highHz=8000">
           </div>
         </div>
+      </div>
     </script>
 
-    <script type="text/template" id="levelReferenceClipTemplate">
-      <div class="levelReference call">
-        <div class="image">
-          <img class ="levelReference" src="/visualizations/spectrogram/<%= recording %>?startSec=<%= startSec %>&endSec=<%= endSec %>&height=203&width=203&highHz=8000">
-          <h2><%= name %></h2>
+    <script type="text/template" id="referenceClipTemplate">
+      <div class="referenceContainer">
+        <div class="reference call">
+          <div class="image">
+            <img class ="reference" src="/visualizations/spectrogram/<%= recording %>?startSec=<%= startSec %>&endSec=<%= endSec %>&height=203&width=203&highHz=8000">
+            <h2><%= name %></h2>
+          </div>
         </div>
       </div>
     </script>
@@ -268,19 +267,19 @@
     </script>
 
     <script type="text/template" id="currentReferenceUndefinedTemplate">
-      <div id="currentReferenceUndefined" class="gameInfo">
+      <div id="currentReferenceUndefined" class="playInfo">
         <div class="tryAgainButton"></div>
       </div>
     </script>
 
     <script type="text/template" id="guessMatched">
-      <div id="guessMatched" class="gameInfo">
+      <div id="guessMatched" class="playInfo">
         <div class="guessMatchedNextButton"></div>
       </div>
     </script>
     
     <script type="text/template" id="guessDidntMatch">
-      <div id="guessDidntMatch" class="gameInfo">
+      <div id="guessDidntMatch" class="playInfo">
         <div class="guessDidntMatchNextButton"></div>
       </div>
     </script>
