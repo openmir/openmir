@@ -3,9 +3,9 @@
 		"pk": 1,
 		"model": "recordings.recording", 
 		"fields": {
-			"name" : "orca",
-			"audioFilename" : "orca.wav",
-			"resultsFilepath" : "orca",
+			"name" : "experiments/orca",
+			"audioFilename" : "experiments/orca.wav",
+			"resultsFilepath" : "experiments/orca",
             "lengthSec" : 30.0,
             "channels" : 1,
             "sampleRate" : 44100
@@ -15,9 +15,9 @@
 		"pk": 2,
 		"model": "recordings.recording", 
 		"fields": {
-			"name" : "orcaLong",
-			"audioFilename" : "orcaLong.wav",
-			"resultsFilepath" : "orcaLong",
+			"name" : "experiments/orcaLong",
+			"audioFilename" : "experiments/orcaLong.wav",
+			"resultsFilepath" : "experiments/orcaLong",
             "lengthSec" : 703.501,
             "channels" : 1,
             "sampleRate" : 44100
