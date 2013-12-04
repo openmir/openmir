@@ -14,18 +14,6 @@ $(document).ready(function () {
         preferFlash: false,
     });
 
-    // Has survey been taken?
-    function surveyCookie() {
-        var cookie = new jecookie('surveyDone');
-        cookie.load();
-        if (cookie.data.surveyDone === undefined) {
-            cookie.data.surveyDone = 1;
-            cookie.save();
-            return false;
-        }
-        return true;
-    }
-
     // GUID - Globally unique identifier for session
     function guidCookie() {
         var cookie = new jecookie('guid');
@@ -254,7 +242,7 @@ $(document).ready(function () {
             // Render all levels
             var that = this;
             _.each(shuffledCollection, function(clip) {
-                if (clip.get("startSec")) {
+                if (clip.get("startSec") != undefined) {
                     that.renderOne(clip);
                 }
             });
@@ -324,7 +312,6 @@ $(document).ready(function () {
         guessMatchedNextButtonUp: function() {
             $(this.el).find(".guessMatchedNextButton").removeClass('pressed');
             this.doNextLevelOrNextGame();
-
         },
 
         tryAgainButtonDown: function(e) {
@@ -360,11 +347,13 @@ $(document).ready(function () {
                 correct : correct
             });
 
-            if (correct) {
-                this.doGuessMatched();
-            } else {
-                this.doGuessDidntMatch();
-            }
+            this.doNextLevelOrNextGame();
+
+            // if (correct) {
+            //     this.doGuessMatched();
+            // } else {
+            //     this.doGuessDidntMatch();
+            // }
         },
 
         // The user has not yet chosen a reference call
@@ -472,11 +461,7 @@ $(document).ready(function () {
         },
         
         doneNextButtonUp: function(e){
-            if (surveyCookie()) {
-                window.location.href = '/games/next';            
-            } else {
-                window.location.href = '/surveyAbout';            
-            }
+            window.location.href = '/play/next';            
         },
 
         initialize: function(){

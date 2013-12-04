@@ -60,7 +60,7 @@ def next(request):
     numGames = Game.objects.count()
     randomGame = random.randint(1,numGames)
 
-    return redirect('/games/%i#play/0' % randomGame)
+    return redirect('/play/%i#play/0' % randomGame)
 
 
 def data(request):
@@ -116,6 +116,12 @@ def convertGameToJson(game,levels):
     outLevels = []
     
     for level in levels:
+        print "*** level="
+        print "level.queryClip=%s" % (level.queryClip)
+        print "level.correctReferenceClip=%s" % (level.correctReferenceClip)
+        print "level.otherReferenceClip1=%s" % (level.otherReferenceClip1)
+        print "level.otherReferenceClip2=%s" % (level.otherReferenceClip2)
+        print "level.otherReferenceClip3=%s" % (level.otherReferenceClip3)
         l = {}
         l['id'] = level.id
         l['gameId'] = game.id

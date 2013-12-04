@@ -26,25 +26,25 @@ body {
 }
 
 #scoreBoardContainer {
-    background-image:url('../../assets/images/backgrounds/orchive/scoreBoardScreen.jpg');
+    background-image:url('../../assets/images/backgrounds/orchive/scoreBoardScreen.png');
 }
 
-#gameContainer {
+#playContainer {
     background-image:url('../../assets/images/backgrounds/orchive/playScreen.jpg');
 }
 
 #levelCompleteContainer {
-    background-image:url('../../assets/images/backgrounds/orchive/levelCompleteBackground.jpg');
+    background-image:url('../../assets/images/backgrounds/orchive/levelCompleteBackground.png');
 }
 
 /* other containers */
 
-#levelQueryContainer {
+.queryContainer {
     padding-top: 80px;
     margin-left: 375px;
 }
 
-#levelReferenceContainer {
+.referenceContainer {
     padding-top: 10px;
     text-align: center;
 }
@@ -76,14 +76,19 @@ body {
 }
 
 
+
 /* The calls */
 
-.levelQuery .call {
+.query {
+    height: 350px;
+}
+
+.query .call {
     padding: 10px;
     display: inline-block;
 }
 
-.levelQuery.call .image {
+.query .call .image {
     background: #000;
     -webkit-border-radius: 40px 40px 40px 40px;
     width: 253px;
@@ -91,18 +96,18 @@ body {
     -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
-.levelQuery.call .image img {
+.query .call .image img {
     margin-top: 2px;
     -webkit-border-radius: 40px 40px 40px 40px;
 }
 
 
-.levelReference {
+.reference {
     display: inline-block;
     height: 203px;
 }
 
-.levelReference.call {
+.reference .call {
     padding: 10px;
     display: inline-block;
     margin: 0px;
@@ -110,7 +115,7 @@ body {
     height: 203px;
 }
 
-.levelReference.call .image {
+.reference .call .image {
     background: #000;
     -webkit-border-radius: 40px 40px 40px 40px;
     width: 203px;
@@ -118,7 +123,7 @@ body {
     -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 
-.levelReference .call .image img {
+.reference .call .image img {
     -webkit-border-radius: 40px 40px 40px 40px;
 }
 
@@ -134,7 +139,7 @@ body {
     -webkit-border-radius: 40px 40px 40px 40px;
 }
 
-.levelQuery img {
+.query img {
     height: 250px;
     width: 250px;
 }
@@ -153,28 +158,28 @@ body {
     -webkit-text-stroke: 1px black;
 }
 
-.levelQuery h2 {
+.query h2 {
     font-size: 50px;
     top: 100px;
 }
 
-.levelQuery .click h2 {
+.query .click h2 {
     top: 90px;
     left: 20px;
 }
 
-.levelReference h2 {
+.reference h2 {
     top: 10px;
     left: 5px;
     font-size: 30px;
 }
 
-.levelReference .click h2 {
+.reference .click h2 {
     top: 0px;
     left: 4px;
 }
 
-/* The guess and next buttons */
+/* The guess and next buttons/orchive */
 #guessButton {
     margin-left: 405px;
     margin-top: 50px;
@@ -232,7 +237,7 @@ body {
 
 .guessDidntMatchNextButton {
     position: absolute;
-    left: 400px;
+    left: 200px;
     top: 600px;
     width: 300px;
     height: 108px;
@@ -273,7 +278,7 @@ body {
 }
 
 
-.gameInfo {
+.playInfo {
     position:absolute;
     top: 0px;
     width: 1024px;
