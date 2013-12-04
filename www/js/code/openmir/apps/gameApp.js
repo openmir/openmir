@@ -261,29 +261,29 @@ $(document).ready(function () {
             "mouseup #guessButton" : "guessButtonUp",
             "mousedown #guessButton" : "guessButtonDown",
 
-            "mousedown .tryAgainButton" : "tryAgainButtonDown",
-            "mouseup .tryAgainButton" : "tryAgainButtonUp",
+            // "mousedown .tryAgainButton" : "tryAgainButtonDown",
+            // "mouseup .tryAgainButton" : "tryAgainButtonUp",
 
-            "mousedown .guessMatchedNextButton" : "guessMatchedNextButtonDown",
-            "mouseup .guessMatchedNextButton" : "guessMatchedNextButtonUp",
+            // "mousedown .guessMatchedNextButton" : "guessMatchedNextButtonDown",
+            // "mouseup .guessMatchedNextButton" : "guessMatchedNextButtonUp",
 
-            "mousedown .guessDidntMatchNextButton" : "guessDidntMatchNextButtonDown",
-            "mouseup .guessDidntMatchNextButton" : "guessDidntMatchNextButtonUp"
+            // "mousedown .guessDidntMatchNextButton" : "guessDidntMatchNextButtonDown",
+            // "mouseup .guessDidntMatchNextButton" : "guessDidntMatchNextButtonUp"
         },
 
-        guessDidntMatchNextButtonDown: function() {
-            $(this.el).find(".guessDidntMatchNextButton").addClass('pressed');
-        },
+        // guessDidntMatchNextButtonDown: function() {
+        //     $(this.el).find(".guessDidntMatchNextButton").addClass('pressed');
+        // },
 
-        guessDidntMatchNextButtonUp: function() {
-            $(this.el).find(".guessDidntMatchNextButton").removeClass('pressed');
-            $("#guessDidntMatch").hide();
-            this.doNextLevelOrNextGame();
-        },
+        // guessDidntMatchNextButtonUp: function() {
+        //     $(this.el).find(".guessDidntMatchNextButton").removeClass('pressed');
+        //     $("#guessDidntMatch").hide();
+        //     this.doNextLevelOrNextGame();
+        // },
 
-        guessMatchedNextButtonDown: function() {
-            $(this.el).find(".guessMatchedNextButton").addClass('pressed');
-        },
+        // guessMatchedNextButtonDown: function() {
+        //     $(this.el).find(".guessMatchedNextButton").addClass('pressed');
+        // },
 
         doNextLevelOrNextGame: function() {
 
@@ -309,19 +309,19 @@ $(document).ready(function () {
             $("#currentReferenceUndefined").show();
         },
 
-        guessMatchedNextButtonUp: function() {
-            $(this.el).find(".guessMatchedNextButton").removeClass('pressed');
-            this.doNextLevelOrNextGame();
-        },
+        // guessMatchedNextButtonUp: function() {
+        //     $(this.el).find(".guessMatchedNextButton").removeClass('pressed');
+        //     this.doNextLevelOrNextGame();
+        // },
 
-        tryAgainButtonDown: function(e) {
-            $(this.el).find(".tryAgainButton").addClass('pressed');
-        },
+        // tryAgainButtonDown: function(e) {
+        //     $(this.el).find(".tryAgainButton").addClass('pressed');
+        // },
 
-        tryAgainButtonUp: function(e) {
-            $("#currentReferenceUndefined").hide();
-            $(this.el).find(".tryAgainButton").removeClass('pressed');
-        },
+        // tryAgainButtonUp: function(e) {
+        //     $("#currentReferenceUndefined").hide();
+        //     $(this.el).find(".tryAgainButton").removeClass('pressed');
+        // },
 
         guessButtonDown: function(e){
             $(this.el).find("#guessButton").addClass('pressed');
