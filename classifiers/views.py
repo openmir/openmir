@@ -103,7 +103,7 @@ def new(request):
             print item
             newAudioFile = "%i_%s" % (item['clipId'], item['label'])
             # item['inputFile'] = "/global/scratch/sness/openmir/audio/%s.wav" % (item['recordingName'])
-            item['inputFile'] = os.path.join(settings.OPENMIR_AUDIO_FILE_PATH, "audio", ("%s.wav" % item['recordingName']))
+            item['inputFile'] = os.path.join(settings.OPENMIR_AUDIO_FILE_PATH, ("%s.wav" % item['recordingName']))
 
             recordingDirectory = os.path.join(clipsDirectory, str(item['recordingId']))
             if os.path.exists(recordingDirectory):
