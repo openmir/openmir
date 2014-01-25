@@ -1,7 +1,7 @@
 //
 // gameBuilderApp
 //
-// sness@sness.net (c) 2013 GPLv3
+//  Copyright (C) 2012-2014 Steven Ness <sness@sness.net>
 //
 
 $(document).ready(function () {

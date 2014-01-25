@@ -1,7 +1,7 @@
 //
 // trainingsetBuilder - A javascript app using backbone.js that uses
 //
-// sness@sness.net (c) 2012 GPLv3
+//  Copyright (C) 2012-2014 Steven Ness <sness@sness.net>
 //
 
 $(document).ready(function () {
