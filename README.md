@@ -17,12 +17,9 @@ steps to setup on ubuntu
      mysql-server mysql-client python-numpy python-scipy \
      python-matplotlib rabbitmq-server memcached
 
-   sudo pip install django-menus django==1.5 django-tastypie==0.9.12 \
-     djangorestframework markdown django-filter celery django-celery \
+   sudo pip install django-menus==1.1.2 django==1.5 django-tastypie==0.9.12 \
+     djangorestframework==2.3.6 markdown django-filter==0.6 celery==3.0.21 django-celery=3.0.17 \
      django-jinja2 jinja2
-
-   sudo pip install -e \
-     git://github.com/tomchristie/django-rest-framework.git#egg=djangorestframework
 ```
 
 1) Install marysas with Python bindings
